@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\MenuController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\UserController;
@@ -24,7 +26,8 @@ Route::group(['prefix' => 'filemanager', 'middleware' => ['web']], function () {
     \UniSharp\LaravelFilemanager\Lfm::routes();
 });
 
-Route::prefix('admin')->group(function () {
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
+    Route::get('/', [DashboardController::class, 'index'])->name('dashboard.index');
     Route::prefix('categories')->group(function () {
         Route::get('/', [CategoryController::class, 'index'])->name('categories.index');
         Route::get('/create', [CategoryController::class, 'create'])->name('categories.create');
@@ -61,6 +64,10 @@ Route::prefix('admin')->group(function () {
         Route::post('/edit/{id}', [UserController::class, 'update'])->name('users.update');
         Route::get('/delete/{id}', [UserController::class, 'delete'])->name('users.delete');
     });
+});
+Route::prefix('admin')->group(function () {
+    Route::post('login', [AuthController::class, 'login'])->name('admin.login');
+
 });
 
 
