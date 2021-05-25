@@ -5,13 +5,27 @@ ul li{list-style: none;}
 .clear{
     clear: both;
 }
+@font-face {
+    font-family: 'Barlow';
+    src: url('../fonts/barlow/Barlow-Regular.ttf');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Josefin';
+    src: url('../fonts/josefin_san/JosefinSans-Regular.ttf');
+    font-style: normal;
+}
 
 body{
-    font-family: "Barlow",-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;
+    font-family: "Barlow";
     font-size: 14px;
 }
 a:hover {
     text-decoration: none !important;
+}
+.with-full{
+    width: 100%;
 }
 .pdl-0{
     padding-left: 0px !important;
@@ -30,8 +44,6 @@ a:hover {
 }
 .mt-30{
     margin-top: 30px;
-    width: 100%;
-    float: left;
 }
 .mb-30{
     margin-bottom: 30px;
@@ -45,29 +57,16 @@ a:hover {
 .pdb-15{
     padding-bottom: 20px;
 }
+.pdt-30 {
+    padding-top: 30px;
+}
+.pdb-100 {
+    padding-bottom: 100px;
+}
 .clearfix {
     clear: both;
 }
-/*@font-face {*/
-/*    font-family: 'RoboR';*/
-/*    src: url('../fonts/Roboto-Regular.ttf');*/
-/*    font-style: normal;*/
-/*}*/
-/*@font-face {*/
-/*    font-family: 'RoboB';*/
-/*    src: url('../fonts/Roboto-Bold.ttf');*/
-/*    font-style: normal;*/
-/*}*/
-/*@font-face {*/
-/*    font-family: 'RoboL';*/
-/*    src: url('../fonts/Roboto-Light.ttf');*/
-/*    font-style: normal;*/
-/*}*/
-/*@font-face {*/
-/*    font-family: 'RoboI';*/
-/*    src: url('../fonts/Roboto-Italic.ttf');*/
-/*    font-style: normal;*/
-/*}*/
+
 .header {
     position: absolute;
     z-index: 99999;
@@ -111,6 +110,7 @@ a:hover {
     padding-right: 20px;
 }
 .navi > li a {
+    font-family: Josefin;
     font-size: 16px;
     font-weight: 500;
     color: #fff;
@@ -147,7 +147,7 @@ a:hover {
     color: rgba(255,255,255,1);
 }
 .tatsu-top h1 {
-    font-family: "Josefin Sans",-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;
+    font-family: "Josefin";
     font-weight: 600;
     text-transform: uppercase;
     font-size: 80px;
@@ -161,7 +161,7 @@ a:hover {
     text-transform: uppercase;
 }
 .tatsu-bottom p {
-    font-family: "Barlow",-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;
+    font-family: "Barlow";
     font-size: 20px;
     line-height: 28px;
 }
@@ -216,4 +216,56 @@ svg:not(:root) {
     line-height: 0;
     z-index: 2;
     pointer-events: none;
+}
+.tatsu-text-inner{
+    width: 65%;
+    text-align: center;
+    color: rgba(105,105,105,1);
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.tatsu-text-inner h4{
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #696969;
+}
+.tatsu-icon_card-icon {
+    width: 50px;
+    height: 50px;
+}
+.our-service h3{
+    margin-top: 0px;
+    font-size: 22px;
+    font-weight: 600;
+    font-family: Josefin;
+    color: #000;
+    line-height: 28px;
+}
+.ras-technology h2 {
+    font-family: Josefin;
+    font-size: 36px;
+    line-height: 40px;
+    font-weight: 600;
+    color: #000000;
+}
+.ras-technology .des {
+    font-family: Barlow;
+    font-size: 16px;
+    color: #72767d;
+    font-weight: 400;
+    line-height: 22px;
+}
+.box-img {
+    text-align: center;
+}
+.read-more {
+    background-color: rgba(34,147,215,1);
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 14px 34px;
+    border-radius: 32px;
+    font-size: 14px;
+    line-height: 14px;
 }
