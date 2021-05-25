@@ -113,7 +113,7 @@ a:hover {
 .navi > li a {
     font-size: 16px;
     font-weight: 500;
-    color: #2293d7;
+    color: #fff;
     line-height: 24px;
     text-transform: uppercase;
 }
@@ -192,7 +192,7 @@ a:hover {
     height: 100%;
 }
 .tatsu-bottom-divider {
-    height: 140px;
+    height: 140px !important;
     color: rgba(255,255,255,1);
     line-height: 0;
 }
@@ -203,4 +203,17 @@ a:hover {
 }
 svg:not(:root) {
     overflow: hidden;
+}
+
+.tatsu-shape-over {
+    position: absolute;
+    width: 100%;
+    left: 0;
+}
+.tatsu-bottom-divider {
+    bottom: 0;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 2;
+    pointer-events: none;
 }
