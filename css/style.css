@@ -269,3 +269,16 @@ svg:not(:root) {
     font-size: 14px;
     line-height: 14px;
 }
+.out-expertise h2 {
+    font-size: 36px;
+    font-family: Josefin;
+    font-weight: 600;
+    color: #000;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+.out-expertise p {
+    font-size: 16px;
+    font-family: Barlow;
+    color: #72767d;
+}
