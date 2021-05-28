@@ -135,7 +135,7 @@ a:hover {
 }
 .tatsu-wrap {
     width: 100%;
-    max-width: 1160px;
+    /*max-width: 1160px;*/
     margin: 0 auto;
 }
 .tatsu-row-wrap {
@@ -260,6 +260,10 @@ svg:not(:root) {
 .box-img {
     text-align: center;
 }
+.box-img img{
+    width: 100%;
+    object-fit: cover;
+}
 .read-more {
     background-color: rgba(34,147,215,1);
     color: #ffffff;
@@ -281,4 +285,122 @@ svg:not(:root) {
     font-size: 16px;
     font-family: Barlow;
     color: #72767d;
+    margin-bottom: 25px;
+}
+.tatsu-title {
+    font-family: Josefin;
+    font-size: 12px;
+    font-weight: 600;
+    color: #000;
+}
+.tatsu-border {
+    width: .9em;
+    height: .16em;
+    background: rgba(34,147,215,1);
+    float: left;
+    margin-top: 5px;
+    margin-right: 6px;
+}
+.equipment h2{
+    font-family: Josefin;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 36px;
+    text-transform: uppercase;
+    letter-spacing: -0.03em;
+    line-height: 40px;
+    color: rgba(0,0,0,1);
+}
+.equipment .des{
+    font-family: Barlow;
+    font-size: 16px;
+    color: #72767d;
+}
+.slider-equipment .item p{
+    font-family: Barlow;
+    font-size: 22px;
+    color: #000;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+.slider-equipment .owl-dots {
+    margin-top: 20px;
+}
+.slider-equipment .owl-dot{
+    background-color: #c2c3c6;
+    border: none;
+    margin-right: 5px;
+}
+.slider-equipment .owl-dot span{
+    height: 15px;
+    width: 15px;
+    display: block;
+
+}
+.owl-dots .active {
+    background: #59AEE1;
+}
+.slider-equipment  .owl-nav {
+    display: none !important;
+}
+.article {
+    padding-top: 50px;
+}
+.article img{
+    height: 280px;
+}
+.title-block {
+    font-family: Josefin;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 24px;
+    color: rgba(49,50,51,1);
+    margin-top: 15px;
+    text-align: center;
+}
+.title-block:hover {
+    color: #337ab7;
+}
+.tatsu-top-divider {
+    color: #f5f6fa;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 2;
+    pointer-events: none;
+}
+.get-in-touch .tatsu-section-pad {
+    padding: 130px 0px 40px 0px !important;
+}
+.get-in-touch .tatsu-section-background {
+    background-image: url('../images/bgf.jpeg');
+}
+.get-in-touch .title {
+    font-size: 18px;
+    font-family: Josefin;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+.get-in-touch .tatsu-bottom p {
+    font-size: 34px;
+    font-family: Josefin;
+    color: #FFFFFF;
+    font-weight: 600;
+    line-height: 22px;
+    text-transform: none;
+    margin-top: 30px;
+}
+.btn-contact {
+    margin-top: 40px;
+}
+.btn-contact a {
+    background-color: #ffffff;
+    color: rgba(10,73,110,1);
+    text-transform: uppercase;
+    padding: 14px 34px;
+    border-radius: 32px;
+    font-size: 14px;
+    line-height: 14px;
+    font-family: Barlow;
 }

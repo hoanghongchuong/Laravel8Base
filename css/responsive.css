@@ -5,9 +5,26 @@
 	.pdl-mobile-25 {
 		padding-left: 25px;
 	}
+	.pdl-mobile-15 {
+		padding-left: 15px !important;
+	}
 	.box-img img{
 		width: 100% !important;
 		height: auto !important;
+	}
+	.out-expertise h2, .ras-technology h2  {
+		font-size: 23px;
+	}
+	.slider-equipment .item {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	.tatsu-top h1 {
+		font-size: 60px;
+	}
+	.get-in-touch .tatsu-bottom p{
+		font-size: 25px;
+		line-height: 28px !important;
 	}
 }
 @media (min-width: 768px) {
@@ -35,4 +52,5 @@
 		width: 550px;
 		height: 300px;
 	}
+
 }
