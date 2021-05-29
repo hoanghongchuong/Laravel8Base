@@ -30,6 +30,9 @@
 		width: 49%;
 		padding: 0px 10px;
 	}
+	.info-contact {
+		margin-top: 60px;
+	}
 }
 @media (min-width: 768px) {
 	
