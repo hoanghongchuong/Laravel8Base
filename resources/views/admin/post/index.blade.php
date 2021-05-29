@@ -12,7 +12,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
-                        <a href="{{route('post.create')}}" class="btn btn-success float-right mb-2">Add Post</a>
+                        <a href="/admin/post/create?type=post" class="btn btn-success float-right mb-2">Add Post</a>
                     </div>
                     <div class="col-lg-12">
                         <table class="table">
@@ -35,7 +35,7 @@
 {{--                                <td>{{$item->slug}}</td>--}}
                                 <td>{{$item->created_at}}</td>
                                 <td>
-                                    <a href="{{route('post.edit', $item->id)}}" class="btn btn-primary">Edit</a>
+                                    <a href="/admin/post/edit/{{$item->id}}?type=post" class="btn btn-primary">Edit</a>
                                     <a href="{{route('post.delete', $item->id)}}" class="btn btn-danger">Delete</a>
                                 </td>
                             </tr>

@@ -19,9 +19,9 @@ class Category extends Model
         return $this->get();
     }
 
-    public function getCategoryPaginate()
+    public function getCategoryPaginate($type)
     {
-        $query = $this->paginate(20);
+        $query = $this->where('type', $type)->paginate(20);
         return $query;
     }
 }

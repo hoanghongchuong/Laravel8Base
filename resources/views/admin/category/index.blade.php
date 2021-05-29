@@ -10,9 +10,15 @@
         <!-- Main content -->
         <div class="content">
             <div class="container-fluid">
+                @if ($message = Session::get('success'))
+                    <div class="alert alert-success alert-block">
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+                        <strong>{{ $message }}</strong>
+                    </div>
+                @endif
                 <div class="row">
                     <div class="col-md-12">
-                        <a href="{{route('categories.create')}}" class="btn btn-success float-right mb-2">Add Category</a>
+                        <a href="categories/create?type=post" class="btn btn-success float-right mb-2">Add Category</a>
                     </div>
                     <div class="col-lg-12">
                         <table class="table">
@@ -35,7 +41,7 @@
 {{--                                    <td>{{$item->slug_vi}}</td>--}}
                                     <td>{{$item->created_at}}</td>
                                     <td>
-                                        <a href="{{route('categories.edit', $item->id)}}" class="btn btn-primary">Edit</a>
+                                        <a href="categories/edit/{{$item->id}}?type=post" class="btn btn-primary">Edit</a>
                                         <a href="{{route('categories.delete', $item->id)}}" class="btn btn-danger">Delete</a>
                                     </td>
                                 </tr>

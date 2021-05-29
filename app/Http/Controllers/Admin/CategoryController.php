@@ -16,14 +16,15 @@ class CategoryController extends Controller
         $this->category = $category;
     }
 
-    public function index() {
-        $listCategory = $this->category->getCategoryPaginate();
-        return view('admin.category.index', compact('listCategory'));
+    public function index(Request $request) {
+        $type = $request->type;
+        $listCategory = $this->category->getCategoryPaginate($type);
+        return view('admin.category.index', compact('listCategory', 'type'));
     }
-    public function create() {
+    public function create(Request $request) {
         $htmlOption = $this->getCategory($parent_id = '');
-
-        return view('admin.category.add', compact('htmlOption'));
+        $type = $request->type;
+        return view('admin.category.add', compact('htmlOption', 'type'));
     }
 
     public function store(Request $request) {
@@ -32,14 +33,14 @@ class CategoryController extends Controller
         $input['slug_en'] = isset($input['name_en']) ? Str::slug($input['name_en']) : '';
 
         $this->category->create($input);
-        return redirect()->route('categories.index');
+        return redirect("admin/categories?type=".$request->type)->with('success', 'Updated successfully');
     }
 
-    public function edit($id) {
+    public function edit($id, Request $request) {
+        $type = $request->type;
         $category = $this->category->findOrFail($id);
         $htmlOption = $this->getCategory($category->parent_id);
-
-        return view('admin.category.edit', compact('category', 'htmlOption'));
+        return view('admin.category.edit', compact('category', 'htmlOption', 'type'));
     }
 
     public function update(Request $request, $id) {

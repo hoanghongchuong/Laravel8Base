@@ -11,6 +11,7 @@
         @include('admin.partials.content_header', ['name' => 'Post', 'key' => 'Edit'])
         <form action="{{route('post.update', $post->id)}}" method="post">
             {{csrf_field()}}
+            <input type="hidden" name="type" value="{{$type}}">
             <div class="content">
                 <div class="container-fluid">
                     @if ($message = Session::get('success'))

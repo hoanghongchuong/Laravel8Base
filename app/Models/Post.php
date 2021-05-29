@@ -11,10 +11,10 @@ class Post extends Model
 
     protected $fillable = [
         'category_id', 'name_vi', 'name_en', 'slug_vi', 'slug_en', 'description_vi', 'description_en', 'content_vi',
-        'content_en', 'image_vi', 'image_en', 'status_vi', 'status_en'
+        'content_en', 'image_vi', 'image_en', 'status_vi', 'status_en', 'type'
     ];
 
-    public function getPostPaginate() {
-        return $this->paginate(20);
+    public function getPostPaginate($type) {
+        return $this->where('type', $type)->paginate(20);
     }
 }

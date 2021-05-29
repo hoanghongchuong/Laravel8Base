@@ -28,6 +28,7 @@ class CreatePostsTable extends Migration
             $table->string('image_en')->nullable();
             $table->boolean('status_vi')->default(true);
             $table->boolean('status_en')->default(true);
+            $table->string('type')->nullable();
             $table->timestamps();
         });
     }

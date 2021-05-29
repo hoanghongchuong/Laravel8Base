@@ -1,26 +1,16 @@
 @extends('admin.layouts.admin')
 @section('title')
-    <title>Admin</title>
+    <title>Setting</title>
 @endsection
 @section('content')
     <div class="content-wrapper">
-        @include('admin.partials.content_header', ['name' => 'Category', 'key' => 'Add'])
-        <form action="{{route('categories.store')}}" method="post">
+        @include('admin.partials.content_header', ['name' => 'Setting', 'key' => 'Add'])
+        <form action="{{route('setting.store')}}" method="post">
             {{csrf_field()}}
-            <input type="hidden" value="{{$type}}" name="type">
+
             <div class="content">
                 <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label for="">Danh mục cha</label>
-                                <select name="parent_id" id="" class="form-control">
-                                    <option value="0">Chọn danh mục cha</option>
-                                    {!! $htmlOption !!}
-                                </select>
-                            </div>
-                        </div>
-                    </div>
+
                     <ul class="nav nav-tabs" role="tablist">
                         <li class="nav-item">
                             <a class="nav-link active" href="#tab1" role="tab" data-toggle="tab">Tiếng việt</a>
@@ -35,12 +25,17 @@
                         <div role="tabpanel" class="tab-pane active" id="tab1">
                             <div class="row">
                                 <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="">Tên tiếng việt</label>
-                                            <input type="text" placeholder="Tên danh mục" class="form-control" name="name_vi">
+                                    <div class="form-group">
+                                        <label for="">Tên tiếng việt</label>
+                                        <input type="text" placeholder="Tên" class="form-control" name="name_vi">
 
-                                        </div>
-                                        <button class="btn btn-primary mb-2">Save</button>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">Giá trị</label>
+                                        <input type="text" placeholder="" class="form-control" name="value_vi">
+
+                                    </div>
+                                    <button class="btn btn-primary mb-2" type="submit">Save</button>
 
                                 </div>
                             </div>
@@ -51,10 +46,14 @@
 
                                     <div class="form-group">
                                         <label for="">Tên tiếng anh</label>
-                                        <input type="text" placeholder="category" class="form-control" name="name_en">
+                                        <input type="text" placeholder="" class="form-control" name="name_en">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">Giá trị</label>
+                                        <input type="text" placeholder="" class="form-control" name="value_en">
 
                                     </div>
-                                    <button class="btn btn-primary mb-2">Save</button>
+                                    <button class="btn btn-primary mb-2" type="submit">Save</button>
 
                                 </div>
                             </div>
