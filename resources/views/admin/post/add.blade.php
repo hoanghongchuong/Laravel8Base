@@ -3,12 +3,12 @@
     <title>Post</title>
 @endsection
 @section('css')
-<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 @endsection()
 @section('content')
     <div class="content-wrapper">
         @include('admin.partials.content_header', ['name' => 'Category', 'key' => 'Add'])
-        <form action="{{route('post.store')}}" method="post">
+        <form action="{{route('post.store')}}" method="post" enctype="multipart/form-data">
             {{csrf_field()}}
             <input type="hidden" value="{{$type}}" name="type">
             <div class="content">
@@ -39,29 +39,35 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
+                                        <label>Chọn ảnh</label>
+                                        <input type="file" name="image_vi">
+                                    </div>
+                                    <div class="form-group">
                                         <label for="">Tên bài viết</label>
-                                        <input type="text" placeholder="" class="form-control" name="name_vi">
+                                        <input type="text" placeholder="" class="form-control" value="" name="name_vi">
                                     </div>
                                     <div class="form-group">
                                         <label for="">Mô tả</label>
                                         <textarea type="text" placeholder="" class="form-control" name="description_vi"></textarea>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="">Nội dung</label>
-                                        <textarea type="text" placeholder="" id="" class="form-control tinymce-editor-init" name="content_vi"> </textarea>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Chọn ảnh</label>
-                                        <input type="file" name="image_vi">
+                                        <textarea type="text" placeholder="" id="" class="form-control tinymce-editor-init" name="content_vi" rows="12"></textarea>
                                     </div>
                                     <div class="form-group">
                                         <label>Hiển thị</label>
                                         <div class="icheck-primary d-inline">
-                                            <input type="checkbox" id="checkboxPrimary2" checked name="status_vi">
+                                            <input type="checkbox" id="checkboxPrimary2" checked>
                                             <label for="checkboxPrimary2">
                                             </label>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="col-md-12">
                                     <button class="btn btn-primary mb-2">Save</button>
                                 </div>
                             </div>
@@ -69,7 +75,6 @@
                         <div role="tabpanel" class="tab-pane fade" id="tab2">
                             <div class="row">
                                 <div class="col-md-6">
-
                                     <div class="form-group">
                                         <label for="">Tên bài viết</label>
                                         <input type="text" placeholder="" class="form-control" name="name_en">
@@ -80,11 +85,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="">Nội dung</label>
-                                        <textarea type="text" placeholder="" id="" class="form-control tinymce-editor-init" name="content_en"> </textarea>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Chọn ảnh</label>
-                                        <input type="file" name="image_en">
+                                        <textarea type="text" placeholder="" class="form-control tinymce-editor-init" rows="12" name="content_en"> </textarea>
                                     </div>
                                     <div class="form-group">
                                         <label>Hiển thị</label>
@@ -108,6 +109,6 @@
 
 @section('js')
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-    <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.9.6/tinymce.min.js"></script>
     <script src="{{asset('js/admin/cus.js')}}"></script>
 @endsection()

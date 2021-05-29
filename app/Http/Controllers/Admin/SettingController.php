@@ -12,10 +12,8 @@ class SettingController extends Controller
     public function index()
     {
         $setting = Setting::first();
-//        dd($setting);
         return view('admin.setting.index', compact('setting'));
     }
-
 
     public function store(Request $request)
     {
@@ -25,7 +23,6 @@ class SettingController extends Controller
         }else {
             Setting::create($request->all());
         }
-//        Setting::updateOrCreate($request->all());
         return back()->with('success', 'Updated successfully');
     }
 }

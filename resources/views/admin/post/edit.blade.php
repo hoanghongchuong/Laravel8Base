@@ -9,7 +9,7 @@
 @section('content')
     <div class="content-wrapper">
         @include('admin.partials.content_header', ['name' => 'Post', 'key' => 'Edit'])
-        <form action="{{route('post.update', $post->id)}}" method="post">
+        <form action="{{route('post.update', $post->id)}}" method="post" enctype="multipart/form-data">
             {{csrf_field()}}
             <input type="hidden" name="type" value="{{$type}}">
             <div class="content">
@@ -45,6 +45,9 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
+                                            <div class="box-img mb-3">
+                                                <img src="{{$post->image_vi}}" alt="">
+                                            </div>
                                             <label>Chọn ảnh</label>
                                             <input type="file" name="image_vi">
                                         </div>
@@ -82,10 +85,6 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <div class="form-group">
-                                                <label>Chọn ảnh</label>
-                                                <input type="file" name="image_en">
-                                            </div>
                                             <label for="">Tên bài viết</label>
                                             <input type="text" placeholder="" class="form-control" value="{{$post->name_en}}" name="name_en">
                                         </div>

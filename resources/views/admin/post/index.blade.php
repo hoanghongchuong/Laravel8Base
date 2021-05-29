@@ -21,7 +21,7 @@
                                 <th scope="col">Id</th>
                                 <th scope="col">Tên tiếng việt</th>
                                 <th scope="col">Tên tiếng anh</th>
-{{--                                <th scope="col">Slug</th>--}}
+                                <th scope="col">Ảnh</th>
                                 <th scope="col">Ngày tạo</th>
                                 <th></th>
                             </tr>
@@ -32,7 +32,11 @@
                                 <th scope="row">{{$item->id}}</th>
                                 <td>{{$item->name_vi}}</td>
                                 <td>{{$item->name_en}}</td>
-{{--                                <td>{{$item->slug}}</td>--}}
+                                <td>
+                                    <div class="box-img">
+                                        <img src="{{$item->img_url}}" alt="">
+                                    </div>
+                                </td>
                                 <td>{{$item->created_at}}</td>
                                 <td>
                                     <a href="/admin/post/edit/{{$item->id}}?type=post" class="btn btn-primary">Edit</a>
