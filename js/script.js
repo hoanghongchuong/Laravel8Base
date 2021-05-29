@@ -113,5 +113,11 @@ $(document).ready(function($){
 		$('.box-search input').addClass('show-input-search');
 	});
 
+	$('.toogle-icon-about').click(function () {
+		$('#about-mobile').toggle();
+	})
+	$('.toogle-icon-service').click(function () {
+		$('#service-mobile').toggle();
+	})
 });
 

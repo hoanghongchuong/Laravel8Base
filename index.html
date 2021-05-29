@@ -42,28 +42,86 @@
         <div class="main-nav tatsu-header">
             <div class="container">
                 <div class="row tatsu-header-row tatsu-wrap">
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-xs-6">
                         <a href=""><img src="images/logo1.png" alt=""></a>
                     </div>
-                    <div class="col-md-7">
-                        <ul class="navi">
-                            <li>
-                                <a href="">About <i class="fa fa-angle-down"></i></a>
-<!--                                <ul class="vk-menu__child gt">-->
-<!--                                    <li><a href="#">Giới thiệu 1</a></li>-->
-<!--                                    <li><a href="#">Giới thiệu 2</a></li>-->
-<!--                                    <li><a href="#">Giới thiệu 3</a></li>-->
-<!--                                    <li><a href="#">Giới thiệu 4</a></li>-->
+                    <div class="col-md-9 col-xs-6">
+                        <div class="visible-xs menu-mobile">
+                            <span onclick="openNav()"><i class="fa fa-bars"></i></span>
+                            <div id="myNav" class="overlay">
+                                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                                <div class="overlay-content">
+                                    <ul>
+                                        <li>
+                                            <a href="#">About <span class="toogle-icon-about"><i class="fa fa-angle-down"></i></span></a>
+                                            <ul class="vk-menu__child-mobile" id="about-mobile">
+                                                <li><a href="#">Why Aquaculture</a></li>
+                                                <li><a href="#">Our expertise</a></li>
+                                                <li><a href="#">Our expertise</a></li>
+                                                <li><a href="#">Our expertise</a></li>
 
-<!--                                </ul>-->
+                                            </ul>
+                                        </li>
+                                        <li><a href="">Ras Technology</a></li>
+                                        <li>
+                                            <a href="#">Services <span class="toogle-icon-service"><i class="fa fa-angle-down"></i></span></a>
+                                            <ul class="vk-menu__child-mobile" id="service-mobile">
+                                                <li><a href="#">Service serice</a></li>
+                                                <li><a href="#">Service serice</a></li>
+                                                <li><a href="#">Service serice</a></li>
+                                                <li><a href="#">Service serice</a></li>
+
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#">Equipment</a>
+                                        </li>
+                                        <li>
+
+                                            <a href="#">Contact</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="navi visible-md visible-lg">
+                            <li>
+                                <a href="">About <span><i class="fa fa-angle-down"></i></span></a>
+                                <ul class="vk-menu__child gt">
+                                    <span class="tatsu-header-pointer"></span>
+                                    <li><a href="#">Why Aquaculture</a></li>
+                                    <li><a href="#">Our expertise</a></li>
+                                    <li><a href="#">Our expertise</a></li>
+                                    <li><a href="#">Our expertise</a></li>
+
+                                </ul>
                             </li>
                             <li><a href="">Ras Technology</a></li>
-                            <li><a href="">Services</a></li>
+                            <li>
+                                <a href="">Services <span><i class="fa fa-angle-down"></i></span></a>
+                                <ul class="vk-menu__child gt">
+                                    <span class="tatsu-header-pointer"></span>
+                                    <li><a href="#">Why Aquaculture</a></li>
+                                    <li><a href="#">Our expertise</a></li>
+                                    <li><a href="#">Our expertise</a></li>
+                                    <li><a href="#">Our expertise</a></li>
+
+                                </ul>
+                            </li>
                             <li><a href="">Equipment</a></li>
                             <li><a href="">Contact</a></li>
                         </ul>
                     </div>
-                    <div class="col-md-2"></div>
+                    <script>
+                        function openNav() {
+                            document.getElementById("myNav").style.width = "90%";
+                        }
+
+                        function closeNav() {
+                            document.getElementById("myNav").style.width = "0%";
+                        }
+                    </script>
+<!--                    <div class="col-md-1"></div>-->
                 </div>
             </div>
         </div>
@@ -360,13 +418,30 @@
 
             </div>
         </div>
-        <div class="section clearfix">
-            <p>dsfsf</p>
-            <p>dsfsf</p>
-            <p>dsfsf</p>
-            <p>dsfsf</p>
-            <p>dsfsf</p>
-            <p>dsfsf</p>
+        <div class="section clearfix footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-6 col-md-4">
+                        <h6>BLOOM AQUA</h6>
+                        <div class="des">
+                            BLOOM AQUA PROVIDES COMPREHENSIVE AQUACULTURE SYSTEMS AND SOLUTIONS
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-4">
+                        <h6>Contact</h6>
+                        <div class="des info">
+                            <p><i class="fa fa-envelope" aria-hidden="true"></i> abc@gmail.com</p>
+                            <p><i class="fa fa-map-marker" aria-hidden="true"></i> 7500A, #11-303 Beach Rd, The Plaza, 199591, Singapore</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-4">
+                        <h6>Hotline</h6>
+                        <div class="des info">
+                            <p><i class="fa fa-phone"></i> 0123654789</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
