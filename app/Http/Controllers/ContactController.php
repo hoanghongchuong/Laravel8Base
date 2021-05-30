@@ -9,6 +9,9 @@ use Illuminate\Http\Request;
 
 class ContactController extends Controller
 {
+    public function index() {
+        return view('frontend.pages.contact');
+    }
     public function sendContact(Request $request) {
         $request->validate(
             [

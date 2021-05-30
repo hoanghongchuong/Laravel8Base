@@ -32,8 +32,13 @@ class AuthController extends Controller {
             return redirect()->route('dashboard.index');
         }
 
-        return back()->withErrors([
-            'email' => 'The provided credentials do not match our records.',
+        return back()->with([
+            'error' => 'Email hoặc mật khẩu không chính xác',
         ]);
+    }
+
+    public function logout() {
+        Auth::logout();
+        return redirect()->route('admin.get.login');
     }
 }

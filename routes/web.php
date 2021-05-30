@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\MenuController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,7 +28,7 @@ Route::group(['prefix' => 'filemanager', 'middleware' => ['web']], function () {
     \UniSharp\LaravelFilemanager\Lfm::routes();
 });
 
-Route::group(['prefix' => 'admin', /* 'middleware' => 'auth' */], function() {
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard.index');
     Route::prefix('categories')->group(function () {
         Route::get('/', [CategoryController::class, 'index'])->name('categories.index');
@@ -70,11 +71,24 @@ Route::group(['prefix' => 'admin', /* 'middleware' => 'auth' */], function() {
        Route::get('/', [SettingController::class, 'index'])->name('setting.index');
         Route::post('/store', [SettingController::class, 'store'])->name('setting.store');
     });
+    Route::prefix('contact')->group(function() {
+        Route::get('/', [\App\Http\Controllers\Admin\ContactController::class, 'index'])->name('admin.contact.index');
+    });
+
+    Route::get('logout', [AuthController::class, 'logout'])->name('admin.logout');
 });
 Route::prefix('admin')->group(function () {
-        Route::get('login', [AuthController::class, 'getLogin'])->name('admin.get.login');
+    Route::get('login', [AuthController::class, 'getLogin'])->name('admin.get.login');
     Route::post('login', [AuthController::class, 'login'])->name('admin.login');
-
 });
 
+
+// route client
+
+Route::group([/**'prefix' => Session::get('website_language') ,*/ 'middleware' => 'locale'], function() {
+    Route::get('change-language/{language}', [HomeController::class, 'changeLanguage'])
+        ->name('user.change-language');
+    Route::get('/', [HomeController::class, 'index']);
+    Route::get('/lien-he', [\App\Http\Controllers\ContactController::class, 'index']);
+});
 
