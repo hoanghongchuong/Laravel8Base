@@ -69,6 +69,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Hiển thị</label>
+
                                             <div class="icheck-primary d-inline">
                                                 <input type="checkbox" id="checkboxPrimary2" @if($post->status_vi)checked @endif name="status_vi">
                                                 <label for="checkboxPrimary2">

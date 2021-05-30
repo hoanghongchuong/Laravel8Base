@@ -4,27 +4,23 @@
 namespace App\Http\Controllers;
 
 
+use App\Http\Requests\ContactRequest;
 use App\Models\Contact;
+use App\Models\Setting;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class ContactController extends Controller
 {
     public function index() {
-        return view('frontend.pages.contact');
+        $setting = Setting::first()->toArray();
+        $lang = Session::get('website_language');
+        $title = trans('title_contact');
+        return view('frontend.pages.contact', compact('setting', 'title', 'lang'));
     }
-    public function sendContact(Request $request) {
-        $request->validate(
-            [
-                'email' => 'required|email',
-                'phone' => 'required|ax:12',
-                "name" => 'required|max:100',
-                'content' => 'required'
-            ],
-            [
 
-            ]
-        );
+    public function sendContact(ContactRequest $request) {
         Contact::create($request->all());
-        return back()->with('success', 'Contact sent successfully');
+        return back()->with('success', trans('contact_send_success'));
     }
 }

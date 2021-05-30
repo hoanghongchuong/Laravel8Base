@@ -21,6 +21,7 @@
                                 <th scope="col">email</th>
                                 <th scope="col">Số điện thoại</th>
                                 <th scope="col">Nội dung</th>
+                                <th scope="col">Ngày gửi</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -32,6 +33,7 @@
                                     <td>{{ $item->email }}</td>
                                     <td>{{$item->phone}}</td>
                                     <td>{{$item->content}}</td>
+                                    <td>{{$item->created_at}}</td>
                                 </tr>
                             @endforeach
 

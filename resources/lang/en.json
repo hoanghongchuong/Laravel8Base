@@ -1,3 +1,14 @@
 {
-    "test" : "test"
+    "title_contact" : "LET’S CONNECT",
+    "contact_user": "Contact us",
+    "name": "Name",
+    "phone": "Phone",
+    "send": "Send",
+    "content_message": "Your message",
+    "contact_send_success": "Contact sent successfully",
+    "email_required": "Email is required",
+    "phone_required": "Phone is required",
+    "name_required": "Name is required",
+    "content_required": "Content is required",
+    "phone_invalid": "Phone number invalid"
 }

@@ -6,7 +6,10 @@
                     <p><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:abc@gmail.com">info@bloom-aqua.com</a></p>
                 </div>
                 <div class="col-md-6">
-                    <p class="text-right"><a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a></p>
+                    <p class="text-right">
+                        <a href="change-language/vi"><img src="{{asset('storage/public/image/vn.png')}}" width="25px" alt=""></a>
+                        <a href="change-language/en"><img src="{{asset('storage/public/image/en.png')}}" width="25px" alt=""></a>
+                    </p>
                 </div>
             </div>
         </div>

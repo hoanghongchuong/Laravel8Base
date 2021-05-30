@@ -4,13 +4,16 @@
 namespace App\Http\Controllers;
 
 
+use App\Models\Setting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
 class HomeController extends Controller
 {
     public function index() {
-        return view('frontend.pages.home');
+        $setting = Setting::first();
+        $title = $setting->company_vi;
+        return view('frontend.pages.home', compact('title'));
     }
     public function changeLanguage(Request $request) {
         $language = $request->language;

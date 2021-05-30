@@ -90,5 +90,6 @@ Route::group([/**'prefix' => Session::get('website_language') ,*/ 'middleware' =
         ->name('user.change-language');
     Route::get('/', [HomeController::class, 'index']);
     Route::get('/lien-he', [\App\Http\Controllers\ContactController::class, 'index']);
+    Route::post('send-contact', [\App\Http\Controllers\ContactController::class, 'sendContact'])->name('send.contact');
 });
 
