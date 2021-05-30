@@ -72,6 +72,7 @@ Route::group(['prefix' => 'admin', /* 'middleware' => 'auth' */], function() {
     });
 });
 Route::prefix('admin')->group(function () {
+        Route::get('login', [AuthController::class, 'getLogin'])->name('admin.get.login');
     Route::post('login', [AuthController::class, 'login'])->name('admin.login');
 
 });

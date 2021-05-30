@@ -19,6 +19,10 @@ class AuthController extends Controller {
         $newUser = User::create($dataUser);
         return $newUser;
     }
+
+    public function getLogin() {
+        return view('admin.auth.login');
+    }
     public function login(Request $request) {
         $credentials = $request->only('email', 'password');
 

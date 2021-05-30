@@ -5,7 +5,7 @@
 @section('content')
     <div class="content-wrapper">
         @include('admin.partials.content_header', ['name' => 'Setting', 'key' => 'Add'])
-        <form action="{{route('setting.store')}}" method="post">
+        <form action="{{route('setting.store')}}" method="post" enctype="multipart/form-data">
             <input type="hidden" name="setting_id" value="{{$setting ? $setting->id : null}}">
             {{csrf_field()}}
             <div class="content">
@@ -115,15 +115,15 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <div class="box-img">
-                                            <img src="" alt="">
+                                        <div class="box-img mb-3">
+                                            <img src="{{$setting ? $setting->favicon_url : ''}}" alt="">
                                         </div>
                                         <label for="">favicon</label>
                                         <input type="file" placeholder="" name="favicon">
                                     </div>
                                     <div class="form-group">
-                                        <div class="box-img">
-                                            <img src="" alt="">
+                                        <div class="box-img mb-3">
+                                            <img src="{{$setting ? $setting->logo_url : ''}}" alt="">
                                         </div>
                                         <label for="">Logo</label>
                                         <input type="file" placeholder="" name="logo">
