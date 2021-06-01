@@ -33,13 +33,13 @@ class PostController extends Controller
             return $item;
         });
 //        dd($posts);
-        return view('admin.post.index', compact('posts'));
+        return view('admin.post.index', compact('posts', 'type'));
     }
 
     public function create(Request $request)
     {
-        $htmlOption = $this->getCategory($parent_id = '');
         $type = $request->type;
+        $htmlOption = $this->getCategory($parent_id = '', $type);
         return view('admin.post.add', compact('htmlOption', 'type'));
     }
 
@@ -62,10 +62,11 @@ class PostController extends Controller
 
     public function edit($id, Request $request)
     {
+        $type = $request->type;
         $post = $this->post->findOrFail($id);
         $post->image_vi = $post->image;
-        $htmlOption = $this->getCategory($post->category_id);
-        $type = $request->type;
+        $htmlOption = $this->getCategory($post->category_id, $type);
+
         return view('admin.post.edit', compact('post', 'htmlOption', 'type'));
     }
 
@@ -98,9 +99,9 @@ class PostController extends Controller
         return back()->with('success', 'Delete successfully');
     }
 
-    public function getCategory($parent_id)
+    public function getCategory($parent_id, $type)
     {
-        $listCategory = $this->category->getAllCategory();
+        $listCategory = $this->category->getAllCategory($type);
         $recursive = new Recursive($listCategory);
         $htmlOption = $recursive->recursive($parent_id);
         return $htmlOption;

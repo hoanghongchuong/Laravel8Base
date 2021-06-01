@@ -48,6 +48,12 @@
                         </li>
                     </ul>
                 </li>
+                <li class="nav-item">
+                    <a href="/admin/post?type=about" class="nav-link">
+                        <i class="far fa-newspaper nav-icon"></i>
+                        <p> Về chúng tôi</p>
+                    </a>
+                </li>
 {{--                <li class="nav-item">--}}
 {{--                    <a href="{{route('menu.index')}}" class="nav-link">--}}
 {{--                        <i class="nav-icon fas fa-th"></i>--}}

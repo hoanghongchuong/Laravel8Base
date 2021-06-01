@@ -20,6 +20,7 @@
                             <strong>{{ $message }}</strong>
                         </div>
                     @endif
+                    @if($type != 'about')
                     <div class="row">
                         <div class="col-md-4">
                             <div class="form-group">
@@ -31,6 +32,7 @@
                             </div>
                         </div>
                     </div>
+                    @endif
                     <ul class="nav nav-tabs" role="tablist">
                         <li class="nav-item">
                             <a class="nav-link active" href="#tab1" role="tab" data-toggle="tab">Tiếng việt</a>
@@ -44,6 +46,7 @@
                             <div role="tabpanel" class="tab-pane active" id="tab1">
                                 <div class="row">
                                     <div class="col-md-6">
+                                        @if($type != 'about')
                                         <div class="form-group">
                                             <div class="box-img mb-3">
                                                 <img src="{{$post->image_vi}}" alt="">
@@ -51,6 +54,7 @@
                                             <label>Chọn ảnh</label>
                                             <input type="file" name="image_vi">
                                         </div>
+                                        @endif
                                         <div class="form-group">
                                             <label for="">Tên bài viết</label>
                                             <input type="text" placeholder="" class="form-control" value="{{$post->name_vi}}" name="name_vi">

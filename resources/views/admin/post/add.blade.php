@@ -3,7 +3,7 @@
     <title>Post</title>
 @endsection
 @section('css')
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
 @endsection()
 @section('content')
     <div class="content-wrapper">
@@ -13,17 +13,19 @@
             <input type="hidden" value="{{$type}}" name="type">
             <div class="content">
                 <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label for="">Danh mục cha</label>
-                                <select name="category_id" id="" class="form-control select2-init">
-                                    <option value="">Chọn danh mục cha</option>
-                                    {!! $htmlOption !!}
-                                </select>
+                    @if($type != 'about')
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="">Danh mục cha</label>
+                                    <select name="category_id" id="" class="form-control select2-init">
+                                        <option value="">Chọn danh mục cha</option>
+                                        {!! $htmlOption !!}
+                                    </select>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    @endif
                     <ul class="nav nav-tabs" role="tablist">
                         <li class="nav-item">
                             <a class="nav-link active" href="#tab1" role="tab" data-toggle="tab">Tiếng việt</a>
@@ -48,7 +50,8 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="">Mô tả</label>
-                                        <textarea type="text" placeholder="" class="form-control" name="description_vi"></textarea>
+                                        <textarea type="text" placeholder="" class="form-control"
+                                                  name="description_vi"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -56,12 +59,14 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="">Nội dung</label>
-                                        <textarea type="text" placeholder="" id="" class="form-control tinymce-editor-init" name="content_vi" rows="12"></textarea>
+                                        <textarea type="text" placeholder="" id=""
+                                                  class="form-control tinymce-editor-init" name="content_vi"
+                                                  rows="12"></textarea>
                                     </div>
                                     <div class="form-group">
                                         <label>Hiển thị</label>
                                         <div class="icheck-primary d-inline">
-                                            <input type="checkbox" id="checkboxPrimary2" checked>
+                                            <input type="checkbox" id="checkboxPrimary2" checked name="status_vi">
                                             <label for="checkboxPrimary2">
                                             </label>
                                         </div>
@@ -85,7 +90,8 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="">Nội dung</label>
-                                        <textarea type="text" placeholder="" class="form-control tinymce-editor-init" rows="12" name="content_en"> </textarea>
+                                        <textarea type="text" placeholder="" class="form-control tinymce-editor-init"
+                                                  rows="12" name="content_en"> </textarea>
                                     </div>
                                     <div class="form-group">
                                         <label>Hiển thị</label>

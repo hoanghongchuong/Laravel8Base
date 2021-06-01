@@ -20,10 +20,10 @@ class CreatePostsTable extends Migration
             $table->string('name_en')->nullable();
             $table->string('slug_vi')->nullable();
             $table->string('slug_en')->nullable();
-            $table->string('description_vi')->nullable();
-            $table->string('description_en')->nullable();
-            $table->string('content_vi')->nullable();
-            $table->string('content_en')->nullable();
+            $table->text('description_vi')->nullable();
+            $table->text('description_en')->nullable();
+            $table->text('content_vi')->nullable();
+            $table->text('content_en')->nullable();
             $table->string('image_vi')->nullable();
             $table->string('image_en')->nullable();
             $table->boolean('status_vi')->default(true);

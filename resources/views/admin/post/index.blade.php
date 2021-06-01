@@ -12,7 +12,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
-                        <a href="/admin/post/create?type=post" class="btn btn-success float-right mb-2">Add Post</a>
+                        <a href="/admin/post/create?type={{$type}}" class="btn btn-success float-right mb-2">Add Post</a>
                     </div>
                     <div class="col-lg-12">
                         <table class="table">
@@ -21,7 +21,9 @@
                                 <th scope="col">Id</th>
                                 <th scope="col">Tên tiếng việt</th>
                                 <th scope="col">Tên tiếng anh</th>
+                                @if($type !='about')
                                 <th scope="col">Ảnh</th>
+                                @endif
                                 <th scope="col">Ngày tạo</th>
                                 <th></th>
                             </tr>
@@ -32,14 +34,16 @@
                                 <th scope="row">{{$item->id}}</th>
                                 <td>{{$item->name_vi}}</td>
                                 <td>{{$item->name_en}}</td>
+                                @if($type !='about')
                                 <td>
                                     <div class="box-img">
                                         <img src="{{$item->img_url}}" alt="">
                                     </div>
                                 </td>
+                                @endif
                                 <td>{{$item->created_at}}</td>
                                 <td>
-                                    <a href="/admin/post/edit/{{$item->id}}?type=post" class="btn btn-primary">Edit</a>
+                                    <a href="/admin/post/edit/{{$item->id}}?type={{$type}}" class="btn btn-primary">Edit</a>
                                     <a href="{{route('post.delete', $item->id)}}" class="btn btn-danger">Delete</a>
                                 </td>
                             </tr>

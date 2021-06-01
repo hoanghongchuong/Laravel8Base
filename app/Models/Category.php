@@ -14,9 +14,9 @@ class Category extends Model
         'name_vi', 'name_en','slug_vi', 'slug_en', 'parent_id', 'type'
     ];
 
-    public function getAllCategory()
+    public function getAllCategory($type)
     {
-        return $this->get();
+        return $this->where('type', $type)->get();
     }
 
     public function getCategoryPaginate($type)
