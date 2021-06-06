@@ -83,7 +83,7 @@
 
                             </ul>
                         </li>
-                        <li><a href="/dich-vu">Equipment</a></li>
+                        <li><a href="/trang-thiet-bi">Equipment</a></li>
                         <li><a href="/lien-he">Contact</a></li>
                     </ul>
                 </div>

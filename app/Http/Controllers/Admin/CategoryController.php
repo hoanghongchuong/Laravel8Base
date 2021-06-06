@@ -22,8 +22,9 @@ class CategoryController extends Controller
         return view('admin.category.index', compact('listCategory', 'type'));
     }
     public function create(Request $request) {
-        $htmlOption = $this->getCategory($parent_id = '');
         $type = $request->type;
+        $htmlOption = $this->getCategory($parent_id = '', $type);
+
         return view('admin.category.add', compact('htmlOption', 'type'));
     }
 
@@ -39,7 +40,7 @@ class CategoryController extends Controller
     public function edit($id, Request $request) {
         $type = $request->type;
         $category = $this->category->findOrFail($id);
-        $htmlOption = $this->getCategory($category->parent_id);
+        $htmlOption = $this->getCategory($category->parent_id, $type);
         return view('admin.category.edit', compact('category', 'htmlOption', 'type'));
     }
 
@@ -57,8 +58,8 @@ class CategoryController extends Controller
         return back()->with('success', 'Xóa thành công');
     }
 
-    public function getCategory($parent_id) {
-        $listCategory = $this->category->getAllCategory();
+    public function getCategory($parent_id, $type) {
+        $listCategory = $this->category->getAllCategory($type);
         $recursive = new Recursive($listCategory);
         $htmlOption = $recursive->recursive($parent_id);
         return $htmlOption;

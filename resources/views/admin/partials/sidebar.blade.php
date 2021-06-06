@@ -69,6 +69,12 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a href="/admin/post?type=equipment" class="nav-link">
+                        <i class="far fa-newspaper nav-icon"></i>
+                        <p>Trang thiết bị</p>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="/admin/post?type=expertise" class="nav-link">
                         <i class="far fa-newspaper nav-icon"></i>
                         <p> Chuyên môn</p>

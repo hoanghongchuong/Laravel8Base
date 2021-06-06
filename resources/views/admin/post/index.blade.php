@@ -43,6 +43,9 @@
                                     @if($type=='about')
                                         <a href=" {{url('gioi-thieu/'.$item->slug_vi.'.html')}}" title=""> {{url('gioi-thieu/'.$item->slug_vi.'.html')}}</a>
                                     @endif
+                                    @if($type=='equipment')
+                                        <a href=" {{url('trang-thiet-bi/'.$item->slug_vi.'.html')}}" title=""> {{url('trang-thiet-bi/'.$item->slug_vi.'.html')}}</a>
+                                    @endif
                                 </td>
                                 <td>{{$item->name_en}}</td>
                                 @if($type !='about')
