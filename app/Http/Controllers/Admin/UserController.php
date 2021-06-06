@@ -21,7 +21,15 @@ class UserController extends Controller
     }
 
     public function index() {
-        $users = $this->user->paginate(10);
+        $users = $this->user->with(['roles'])->paginate(10);
+        $users->map(function ($user) {
+            $roleArray = [];
+            foreach($user->roles as $item) {
+                array_push($roleArray, $item->display_name);
+            }
+            $user->roleArray = implode(', ', $roleArray);
+            return $user;
+        });
         return view('admin.user.index', compact('users'));
     }
 
@@ -54,7 +62,6 @@ class UserController extends Controller
     }
 
     public function update(Request $request, $id) {
-
 
         DB::beginTransaction();
         try {

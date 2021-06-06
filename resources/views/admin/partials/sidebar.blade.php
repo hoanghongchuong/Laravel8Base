@@ -17,14 +17,14 @@
         <!-- Sidebar Menu -->
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-{{--                <li class="nav-item">--}}
-{{--                    <a href="{{route('user.index')}}" class="nav-link">--}}
-{{--                        <i class="nav-icon fas fa-users"></i>--}}
-{{--                        <p>--}}
-{{--                            Quản lý user--}}
-{{--                        </p>--}}
-{{--                    </a>--}}
-{{--                </li>--}}
+                <li class="nav-item">
+                    <a href="{{route('user.index')}}" class="nav-link">
+                        <i class="nav-icon fas fa-users"></i>
+                        <p>
+                            Quản lý user
+                        </p>
+                    </a>
+                </li>
                 <li class="nav-item has-treeview">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-th"></i>
@@ -52,6 +52,18 @@
                     <a href="/admin/post?type=about" class="nav-link">
                         <i class="far fa-newspaper nav-icon"></i>
                         <p> Về chúng tôi</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/admin/post?type=service" class="nav-link">
+                        <i class="far fa-newspaper nav-icon"></i>
+                        <p> Dịch vụ</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/admin/post?type=expertise" class="nav-link">
+                        <i class="far fa-newspaper nav-icon"></i>
+                        <p> Chuyên môn</p>
                     </a>
                 </li>
 {{--                <li class="nav-item">--}}

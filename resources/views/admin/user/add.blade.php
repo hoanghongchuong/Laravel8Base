@@ -13,7 +13,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-6">
-                        <form action="{{route('users.store')}}" method="post" enctype="multipart/form-data">
+                        <form action="{{route('user.store')}}" method="post" enctype="multipart/form-data">
                             {{csrf_field()}}
                             <div class="form-group">
                                 <label for="">Tên user</label>
@@ -31,7 +31,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="">Chọn vai trò</label>
-                                <select name="role_id[]" id="select2-role" class="form-control" multiple="multiple">
+                                <select name="role_id[]" id="select2-role" class="form-control select2-init" multiple="multiple">
                                     <option value=""></option>
                                     @foreach($roles as $role)
                                     <option value="{{$role->id}}">{{$role->name}}</option>

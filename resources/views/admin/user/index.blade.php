@@ -33,6 +33,7 @@
                                 <th scope="col">#</th>
                                 <th scope="col">Tên</th>
                                 <th scope="col">email</th>
+                                <th scope="col">Role</th>
                                 <th scope="col">Action</th>
                             </tr>
                             </thead>
@@ -44,9 +45,10 @@
                                     <th scope="row">{{ $user->id }}</th>
                                     <td>{{ $user->name }}</td>
                                     <td>{{ $user->email }}</td>
+                                    <td>{{$user->roleArray}}</td>
 
                                     <td>
-                                        <a href="{{ route('users.edit', ['id' => $user->id]) }}"
+                                        <a href="{{ route('user.edit', ['id' => $user->id]) }}"
                                            class="btn btn-default">Edit</a>
                                         <a href="javascript:;"
                                            data-id="{{ $user->id }}"

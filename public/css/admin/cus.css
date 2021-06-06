@@ -1,6 +1,12 @@
 .select2-selection__choice, .select2-selection__choice__remove{
-    background-color: #0c525d !important;
+    background-color: #007bff !important;
     border: none !important;
+}
+.select2-container--default .select2-dropdown .select2-search__field:focus, .select2-container--default .select2-search--inline .select2-search__field:focus {
+    border:none !important;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+    color: #fff !important;
 }
 .mt-10 {
     margin-top: 10px;

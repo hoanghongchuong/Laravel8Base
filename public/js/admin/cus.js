@@ -1,6 +1,6 @@
 $(function () {
     $('.select2-init').select2({
-
+        placeholder: "Select role"
     });
         let editor_config = {
         path_absolute : "/",

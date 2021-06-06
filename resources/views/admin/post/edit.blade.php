@@ -20,7 +20,7 @@
                             <strong>{{ $message }}</strong>
                         </div>
                     @endif
-                    @if($type != 'about')
+                    @if($type != 'about'  && $type != 'service' && $type !='expertise')
                     <div class="row">
                         <div class="col-md-4">
                             <div class="form-group">
