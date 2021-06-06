@@ -10,5 +10,6 @@
     "phone_required": "Chưa nhập số điện thoại",
     "name_required": "Chưa nhập tên",
     "content_required": "Content is required",
-    "phone_invalid": "Số điện thoại không chính xác"
+    "phone_invalid": "Số điện thoại không chính xác",
+    "service": "Dịch vụ"
 }

@@ -93,14 +93,14 @@
                                         <textarea type="text" placeholder="" class="form-control tinymce-editor-init"
                                                   rows="12" name="content_en"> </textarea>
                                     </div>
-                                    <div class="form-group">
-                                        <label>Hiển thị</label>
-                                        <div class="icheck-primary d-inline">
-                                            <input type="checkbox" id="checkboxPrimary1" checked name="status_en">
-                                            <label for="checkboxPrimary1">
-                                            </label>
-                                        </div>
-                                    </div>
+{{--                                    <div class="form-group">--}}
+{{--                                        <label>Hiển thị</label>--}}
+{{--                                        <div class="icheck-primary d-inline">--}}
+{{--                                            <input type="checkbox" id="checkboxPrimary1" checked name="status_en">--}}
+{{--                                            <label for="checkboxPrimary1">--}}
+{{--                                            </label>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
                                     <button class="btn btn-primary mb-2">Save</button>
                                 </div>
                             </div>

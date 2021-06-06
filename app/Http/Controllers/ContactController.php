@@ -15,6 +15,7 @@ class ContactController extends Controller
     public function index() {
         $setting = Setting::first()->toArray();
         $lang = Session::get('website_language');
+
         $title = trans('title_contact');
         return view('frontend.pages.contact', compact('setting', 'title', 'lang'));
     }

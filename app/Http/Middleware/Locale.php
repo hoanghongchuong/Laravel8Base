@@ -21,7 +21,7 @@ class Locale
 
         config(['app.locale' => $language]);
         // Chuyển ứng dụng sang ngôn ngữ được chọn
-
+        \Session::put('website_language', $language);
         return $next($request);
     }
 }

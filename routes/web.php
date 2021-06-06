@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -89,6 +90,7 @@ Route::group([/**'prefix' => Session::get('website_language') ,*/ 'middleware' =
     Route::get('change-language/{language}', [HomeController::class, 'changeLanguage'])
         ->name('user.change-language');
     Route::get('/', [HomeController::class, 'index']);
+    Route::get('/dich-vu', [ServiceController::class, 'index']);
     Route::get('/lien-he', [\App\Http\Controllers\ContactController::class, 'index']);
     Route::post('send-contact', [\App\Http\Controllers\ContactController::class, 'sendContact'])->name('send.contact');
 });

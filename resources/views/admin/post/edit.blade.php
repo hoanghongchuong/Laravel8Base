@@ -107,14 +107,14 @@
                                             <label for="">Nội dung</label>
                                             <textarea type="text" placeholder="" id="" class="form-control tinymce-editor-init" name="content_en" rows="12">{!! $post->content_en !!}</textarea>
                                         </div>
-                                        <div class="form-group">
-                                            <label>Hiển thị</label>
-                                            <div class="icheck-primary d-inline">
-                                                <input type="checkbox" id="checkboxPrimary2" @if($post->status_en)checked @endif name="status_en">
-                                                <label for="checkboxPrimary2">
-                                                </label>
-                                            </div>
-                                        </div>
+{{--                                        <div class="form-group">--}}
+{{--                                            <label>Hiển thị</label>--}}
+{{--                                            <div class="icheck-primary d-inline">--}}
+{{--                                                <input type="checkbox" id="checkboxPrimary2" @if($post->status_en)checked @endif name="status_en">--}}
+{{--                                                <label for="checkboxPrimary2">--}}
+{{--                                                </label>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
                                     </div>
                                     <div class="col-md-12">
                                         <button class="btn btn-primary mb-2">Save</button>

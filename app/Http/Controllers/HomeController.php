@@ -13,6 +13,7 @@ class HomeController extends Controller
     public function index() {
         $setting = Setting::first();
         $title = $setting->company_vi;
+        $lang = Session::get('website_language');
         return view('frontend.pages.home', compact('title'));
     }
     public function changeLanguage(Request $request) {
