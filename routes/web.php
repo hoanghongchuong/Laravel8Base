@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\DashboardController;
@@ -54,9 +55,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
         Route::get('/', [MenuController::class, 'index'])->name('menu.index');
         Route::get('/create', [MenuController::class, 'create'])->name('menu.create');
         Route::post('/store', [MenuController::class, 'store'])->name('menu.store');
-        Route::get('/edit/{id}', [MenuController::class, 'edit']);
+        Route::get('/edit/{id}', [MenuController::class, 'edit'])->name('menu.edit');
         Route::post('/update/{id}', [MenuController::class, 'update'])->name('menu.update');
-        Route::get('/delete/{id}', [MenuController::class, 'delete']);
+        Route::get('/delete/{id}', [MenuController::class, 'delete'])->name('menu.delete');
     });
 
     Route::prefix('users')->group(function () {
@@ -91,6 +92,9 @@ Route::group([/**'prefix' => Session::get('website_language') ,*/ 'middleware' =
         ->name('user.change-language');
     Route::get('/', [HomeController::class, 'index']);
     Route::get('/dich-vu', [ServiceController::class, 'index']);
+    Route::get('/dich-vu/{id}.html', [ServiceController::class, 'detail']);
+    Route::get('/gioi-thieu', [AboutController::class, 'index']);
+    Route::get('/gioi-thieu/{id}.html', [AboutController::class, 'detail']);
     Route::get('/lien-he', [\App\Http\Controllers\ContactController::class, 'index']);
     Route::post('send-contact', [\App\Http\Controllers\ContactController::class, 'sendContact'])->name('send.contact');
 });

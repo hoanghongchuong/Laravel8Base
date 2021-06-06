@@ -11,5 +11,8 @@
     "name_required": "Name is required",
     "content_required": "Content is required",
     "phone_invalid": "Phone number invalid",
-    "service": "Service"
+    "service": "Service",
+    "about_us": "About us",
+    "des_contact": "Whatever your aquaculture needs, we are here to help.",
+    "get_in_touch": "Get in touch"
 }

@@ -10,6 +10,7 @@
     <!-- Main content -->
         <div class="content">
             <div class="container-fluid">
+                @include('flash-message')
                 <div class="row">
                     <div class="col-md-12">
                         <a href="{{route('menu.create')}}" class="btn btn-success float-right mb-2">Add Menu</a>
@@ -18,21 +19,25 @@
                         <table class="table">
                             <thead>
                             <tr>
-                                <th scope="col">Id</th>
-                                <th scope="col">Name</th>
-                                <th scope="col">Slug</th>
+                                <th scope="col">Stt
+                                <th scope="col">Tên tiếng việt</th>
+                                <th scope="col">Tên tiếng anh</th>
+                                <th scope="col">Link</th>
+                                <th scope="col">Danh mục cha</th>
                                 <th>Action</th>
                             </tr>
                             </thead>
                             <tbody>
                             @foreach($menus as $item)
                                 <tr>
-                                    <th scope="row">{{$item->id}}</th>
-                                    <td>{{$item->name}}</td>
+                                    <th scope="row">{{$item->order}}</th>
+                                    <td>{{$item->name_vi}}</td>
+                                    <td>{{$item->name_en}}</td>
                                     <td>{{$item->slug}}</td>
+                                    <td>{{isset($item->parent) ? $item->parent->name_vi : ''}}</td>
                                     <td>
-                                        <a href="{{route('categories.edit', $item->id)}}" class="btn btn-primary">Edit</a>
-                                        <a href="{{route('categories.delete', $item->id)}}" class="btn btn-danger">Delete</a>
+                                        <a href="{{route('menu.edit', $item->id)}}" class="btn btn-primary">Edit</a>
+                                        <a href="{{route('menu.delete', $item->id)}}" class="btn btn-danger">Delete</a>
                                     </td>
                                 </tr>
                             @endforeach

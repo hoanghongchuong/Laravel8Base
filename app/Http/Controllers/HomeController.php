@@ -14,7 +14,7 @@ class HomeController extends Controller
         $setting = Setting::first();
         $title = $setting->company_vi;
         $lang = Session::get('website_language');
-        return view('frontend.pages.home', compact('title'));
+        return view('frontend.pages.home', compact('title', 'lang'));
     }
     public function changeLanguage(Request $request) {
         $language = $request->language;

@@ -33,7 +33,7 @@ class CategoryController extends Controller
         $input['slug_en'] = isset($input['name_en']) ? Str::slug($input['name_en']) : '';
 
         $this->category->create($input);
-        return redirect("admin/categories?type=".$request->type)->with('success', 'Updated successfully');
+        return redirect("admin/categories?type=".$request->type)->with('success', 'Tạo mới thành công');
     }
 
     public function edit($id, Request $request) {
@@ -49,12 +49,12 @@ class CategoryController extends Controller
         $input['slug_vi'] = isset($input['name_vi']) ? Str::slug($input['name_vi']) : '';
         $input['slug_en'] = isset($input['name_en']) ? Str::slug($input['name_en']) : '';
         $category->update($input);
-        return back()->with('success', 'Updated successfully');
+        return back()->with('success', 'Cập nhật thành công');
     }
     public function delete($id) {
         $category = $this->category->findOrFail($id);
         $category->delete();
-        return back()->with('success', 'Delete successfully');
+        return back()->with('success', 'Xóa thành công');
     }
 
     public function getCategory($parent_id) {

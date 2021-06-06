@@ -11,5 +11,8 @@
     "name_required": "Chưa nhập tên",
     "content_required": "Content is required",
     "phone_invalid": "Số điện thoại không chính xác",
-    "service": "Dịch vụ"
+    "service": "Dịch vụ",
+    "about_us": "Về chúng tôi",
+    "des_contact": "Hãy liên hệ với chúng tôi",
+    "get_in_touch": "Liên lạc"
 }

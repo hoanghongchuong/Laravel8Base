@@ -18,8 +18,9 @@ class CreateMenusTable extends Migration
             $table->integer('parent_id')->default(0);
             $table->string('name_vi')->nullable();
             $table->string('name_en')->nullable();
-            $table->string('slug_vi')->nullable();
-            $table->string('slug_en')->nullable();
+            $table->string('slug')->nullable();
+            $table->integer('order');
+            $table->boolean('status')->default(true);
             $table->timestamps();
         });
     }

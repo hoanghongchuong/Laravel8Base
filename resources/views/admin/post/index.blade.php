@@ -32,7 +32,18 @@
                             @foreach($posts as $item)
                             <tr>
                                 <th scope="row">{{$item->id}}</th>
-                                <td>{{$item->name_vi}}</td>
+                                <td>
+                                    {{$item->name_vi}} <br>
+                                    @if($type=='service')
+                                        <a href=" {{url('dich-vu/'.$item->slug_vi.'.html')}}" title=""> {{url('dich-vu/'.$item->slug_vi.'.html')}}</a>
+                                    @endif
+                                    @if($type=='post')
+                                        <a href=" {{url('bai-viet/'.$item->slug_vi.'.html')}}" title=""> {{url('bai-viet/'.$item->slug_vi.'.html')}}</a>
+                                    @endif
+                                    @if($type=='about')
+                                        <a href=" {{url('gioi-thieu/'.$item->slug_vi.'.html')}}" title=""> {{url('gioi-thieu/'.$item->slug_vi.'.html')}}</a>
+                                    @endif
+                                </td>
                                 <td>{{$item->name_en}}</td>
                                 @if($type !='about')
                                 <td>

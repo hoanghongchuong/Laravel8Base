@@ -1,0 +1,67 @@
+@media (max-width: 767px){
+	.our-service h3{
+		font-size: 16px;
+	}
+	.pdl-mobile-25 {
+		padding-left: 25px;
+	}
+	.pdl-mobile-15 {
+		padding-left: 15px !important;
+	}
+	.box-img img{
+		width: 100% !important;
+		height: auto !important;
+	}
+	.out-expertise h2, .ras-technology h2  {
+		font-size: 23px;
+	}
+	.slider-equipment .item {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	.tatsu-top h1 {
+		font-size: 60px;
+	}
+	.get-in-touch .tatsu-bottom p{
+		font-size: 25px;
+		line-height: 28px !important;
+	}
+	.box-item {
+		width: 49%;
+		padding: 0px 10px;
+	}
+	.info-contact {
+		margin-top: 60px;
+	}
+}
+@media (min-width: 768px) {
+	
+}
+@media (min-width: 768px) and (max-width: 999px){
+	.menu{
+		margin-top: 20px;
+	}
+	.list-hot-item{
+		display: block;
+	}
+	.list-hot-item .left img, .list-hot-item .right img{
+		height: auto;
+	}
+	.list-product-item .item img{
+		height: auto;
+	}
+}
+@media (min-width: 1000px) {
+	
+}
+@media (min-width: 1200px){
+	.ras-technology .box-img img{
+		width: 550px;
+		height: 300px;
+	}
+	.des-about {
+		width: 45%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
