@@ -33,29 +33,41 @@
                         </p>
                     </a>
                 </li>
-                <li class="nav-item has-treeview">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-th"></i>
-                        <p>
-                            Quản lý bài viết
-                            <i class="fas fa-angle-left right"></i>
-                        </p>
+                <li class="nav-item">
+                    <a href="/admin/post?type=post" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p> Bài viết</p>
                     </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="/admin/categories?type=post" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Danh mục</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/admin/post?type=post" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p> Bài viết</p>
-                            </a>
-                        </li>
-                    </ul>
                 </li>
+                <li class="nav-item">
+                    <a href="/admin/post?type=expertise" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Chuyên môn</p>
+                    </a>
+                </li>
+{{--                <li class="nav-item has-treeview">--}}
+{{--                    <a href="#" class="nav-link">--}}
+{{--                        <i class="nav-icon fas fa-th"></i>--}}
+{{--                        <p>--}}
+{{--                            Quản lý bài viết--}}
+{{--                            <i class="fas fa-angle-left right"></i>--}}
+{{--                        </p>--}}
+{{--                    </a>--}}
+{{--                    <ul class="nav nav-treeview">--}}
+{{--                        <li class="nav-item">--}}
+{{--                            <a href="/admin/categories?type=post" class="nav-link">--}}
+{{--                                <i class="far fa-circle nav-icon"></i>--}}
+{{--                                <p>Danh mục</p>--}}
+{{--                            </a>--}}
+{{--                        </li>--}}
+{{--                        <li class="nav-item">--}}
+{{--                            <a href="/admin/post?type=post" class="nav-link">--}}
+{{--                                <i class="far fa-circle nav-icon"></i>--}}
+{{--                                <p> Bài viết</p>--}}
+{{--                            </a>--}}
+{{--                        </li>--}}
+{{--                    </ul>--}}
+{{--                </li>--}}
                 <li class="nav-item">
                     <a href="/admin/post?type=about" class="nav-link">
                         <i class="far fa-newspaper nav-icon"></i>

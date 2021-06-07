@@ -20,7 +20,7 @@
     height: calc(2.25rem + 2px) !important;
 }
 .box-img img{
-    width: 150px;
-    height: 100px;
+    max-width: 150px;
+    max-height: 100px;
     object-fit: cover;
 }

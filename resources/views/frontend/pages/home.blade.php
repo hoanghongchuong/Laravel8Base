@@ -79,13 +79,13 @@
                         </div>
                         <div class="mt-30 col-xs-12 col-md-12 pdl-0 pdr-0">
                             <div class="col-xs-12 col-md-6 pdl-0">
-                                <p><img src="images/img5.png" class="tatsu-icon_card-icon" alt=""></p>
+                                <p><img src="{{asset('/frontend/images/img5.png')}}" class="tatsu-icon_card-icon" alt=""></p>
                                 <div class="des">
                                     <p>A more sustainable production – water recirculation and advanced water treatment ensures significantly reduced water pollution from feed, faeces, and chemical waste.</p>
                                 </div>
                             </div>
                             <div class="col-xs-12 col-md-6 pdl-0">
-                                <p><img src="images/img4.png" class="tatsu-icon_card-icon" alt=""></p>
+                                <p><img src="{{asset('/frontend/images/img4.png')}}" class="tatsu-icon_card-icon" alt=""></p>
                                 <div class="des">
                                     <p>A more sustainable production – water recirculation and advanced water treatment ensures significantly reduced water pollution from feed, faeces, and chemical waste.</p>
                                 </div>
@@ -96,7 +96,7 @@
                 </div>
                 <div class="col-xs-12 col-md-6">
                     <div class="box-img pdt-30">
-                        <img src="images/img1.png" alt="">
+                        <img src="{{asset('/frontend/images/img1.png')}}" alt="">
                     </div>
                 </div>
             </div>
@@ -108,63 +108,25 @@
             <div class="row">
                 <div class="col-xs-12 col-md-6">
                     <div class="box-img">
-                        <img src="images/img6.png" alt="">
+                        <img src="{{asset('frontend/images/img6.png')}}" alt="">
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-6">
                     <div class="tatsu-expand">
-                        <h6 class="tatsu-title"><span class="tatsu-border"></span><span> Our Expertise</span></h6>
+                        <h6 class="tatsu-title"><span class="tatsu-border"></span><span> {{trans('title_expertise')}}</span></h6>
                     </div>
-                    <h2>We can assist with a full suite of aquaculture services:</h2>
+                    <h2>{{trans('our_expertise')}}:</h2>
                     <div class="clearfix tatsu-wrap">
+                        @foreach($expertise as $ex)
                         <div class="col-md-6 pdl-0">
                             <div class="col-xs-3 col-md-3 pdl-0">
-                                <img src="images/img7.png" alt="" class="tatsu-icon_card-icon">
+                                <img src="{{$ex->img_url}}" alt="" class="tatsu-icon_card-icon">
                             </div>
                             <div class="col-xs-9 col-md-9 pdl-mobile-25 pdl-0">
-                                <p class="text-des">Feasibility studies and business plan creation including site assessment.</p>
+                                <p class="text-des">{{$ex['name_'.$lang]}}</p>
                             </div>
                         </div>
-                        <div class="col-md-6 pdl-0">
-                            <div class="col-xs-3 col-md-3 pdl-0">
-                                <img src="images/img8.png" alt="" class="tatsu-icon_card-icon">
-                            </div>
-                            <div class="col-xs-9 col-md-9 pdl-mobile-25 pdl-0">
-                                <p class="text-des">Feasibility studies and business plan creation including site assessment.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6 pdl-0">
-                            <div class="col-xs-3 col-md-3 pdl-0">
-                                <img src="images/img9.png" alt="" class="tatsu-icon_card-icon">
-                            </div>
-                            <div class="col-xs-9 col-md-9 pdl-mobile-25 pdl-0">
-                                <p class="text-des">Feasibility studies and business plan creation including site assessment.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6 pdl-0">
-                            <div class="col-xs-3 col-md-3 pdl-0">
-                                <img src="images/img10.png" alt="" class="tatsu-icon_card-icon">
-                            </div>
-                            <div class="col-xs-9 col-md-9 pdl-mobile-25 pdl-0">
-                                <p class="text-des">Feasibility studies and business plan creation including site assessment.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6 pdl-0">
-                            <div class="col-xs-3 col-md-3 pdl-0">
-                                <img src="images/img11.png" alt="" class="tatsu-icon_card-icon">
-                            </div>
-                            <div class="col-xs-9 col-md-9 pdl-mobile-25 pdl-0">
-                                <p class="text-des">Feasibility studies and business plan creation including site assessment.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6 pdl-0">
-                            <div class="col-xs-3 col-md-3 pdl-0">
-                                <img src="images/img12.png" alt="" class="tatsu-icon_card-icon">
-                            </div>
-                            <div class="col-xs-9 col-md-9 pdl-mobile-25 pdl-0">
-                                <p class="text-des">Feasibility studies and business plan creation including site assessment.</p>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -179,46 +141,14 @@
                 </div>
                 <div class="slider-equipment">
                     <div class="owl-carousel owl-theme">
+                        @foreach($equipments as $eq)
                         <div class="item">
                             <div class="box-img">
-                                <img src="images/s1.jpg" alt="">
+                                <img src="{{$eq->img_url}}" alt="">
                             </div>
-                            <p>slfdsfsdf</p>
+                            <p>{{$eq['name_'.$lang]}}</p>
                         </div>
-                        <div class="item">
-                            <div class="box-img">
-                                <img src="images/s2.jpg" alt="">
-                            </div>
-                            <p>slfdsfsdf</p>
-                        </div>
-                        <div class="item">
-                            <div class="box-img">
-                                <img src="images/s3.jpg" alt="">
-                            </div>
-                            <p>slfdsfsdf</p>
-                        </div>
-                        <div class="item">
-                            <div class="box-img">
-                                <img src="images/s3.jpg" alt="">
-                            </div>
-                            <p>slfdsfsdf</p>
-                        </div>
-                        <div class="item">
-                            <div class="box-img">
-                                <img src="images/s3.jpg" alt="">
-                            </div>
-                            <p>slfdsfsdf</p>
-                        </div><div class="item">
-                            <div class="box-img">
-                                <img src="images/s3.jpg" alt="">
-                            </div>
-                            <p>slfdsfsdf</p>
-                        </div><div class="item">
-                            <div class="box-img">
-                                <img src="images/s3.jpg" alt="">
-                            </div>
-                            <p>slfdsfsdf</p>
-                        </div>
+                        @endforeach
 
 
                     </div>
@@ -229,66 +159,17 @@
     <div class="section clearfix tatsu-wrap" style="background: #f5f6fa">
         <div class="container article">
             <div class="row pdb-100">
+                @foreach($posts as $post)
                 <div class="col-xs-12 col-md-4 pdl-mobile-15 pdl-0">
-                    <a href="">
+                    <a href="{{url('bai-viet/'.$post->slug_vi.'.html')}}">
                         <div class="box-img">
-                            <img src="images/s4.jpg" alt="">
+                            <img src="{{$post->img_url}}" alt="">
                         </div>
-                        <p class="title-block"> RAS technology solution contributes in achieving the Sustainable Development Goals </p>
+                        <p class="title-block">{{$post['name_'.$lang]}}</p>
                     </a>
                 </div>
-                <div class="col-xs-12 col-md-4 pdl-mobile-15 pdl-0">
-                    <a href="">
-                        <div class="box-img">
-                            <img src="images/s5.jpg" alt="">
-                        </div>
-                        <p class="title-block"> RAS technology solution contributes in achieving the Sustainable Development Goals </p>
-                    </a>
-                </div>
-                <div class="col-xs-12 col-md-4 pdl-mobile-15 pdl-0">
-                    <a href="">
-                        <div class="box-img">
-                            <img src="images/s6.jpg" alt="">
-                        </div>
-                        <p class="title-block"> RAS technology solution contributes in achieving the Sustainable Development Goals </p>
-                    </a>
-                </div>
+                @endforeach
             </div>
-        </div>
-    </div>
-    <div class="section clearfix">
-        <div class="get-in-touch">
-            <div class="tatsu-section">
-                <div class="tatsu-shape-divider tatsu-top-divider">
-                    <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" width="1920" height="217" viewBox="0 0 1920 217">
-                        <g fill-rule="evenodd" transform="rotate(180 960 108.5)">
-                            <path d="M0,57.46875 C203.364583,135.217754 494.835938,156.564108 874.414062,121.507813 C1192.61198,-13.9827666 1541.14063,-35.3291208 1920,57.46875 L1920,207 L0,207 L0,57.46875 Z" opacity=".3"></path>
-                            <path d="M0,79 C292.46875,165.453125 612.46875,165.453125 960,79 C1307.53125,-7.453125 1627.53125,-7.453125 1920,79 L1920,207 L0,207 L0,79 Z" opacity=".6"></path>
-                            <path d="M0,89 C288.713542,146.786458 608.713542,146.786458 960,89 C1311.28646,31.2135417 1631.28646,31.2135417 1920,89 L1920,217 L0,217 L0,89 Z"></path> </g>
-                    </svg>
-                </div>
-                <div class="tatsu-section-pad clearfix">
-                    <div class="tatsu-section-offset-wrap">
-                        <div class="tatsu-row-wrap tatsu-wrap pdt-30">
-                            <div class="tatsu-top">
-                                <p class="title">Get In Touch</p>
-                            </div>
-                            <div class="tatsu-bottom">
-                                <p>Whatever your aquaculture needs, we are here to help.</p>
-                                <div class="btn-contact">
-                                    <a href="">Contact us</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="tatsu-section-background-wrap">
-                    <div class="tatsu-section-background tatsu-bg-lazyload tatsu-bg-lazyloaded"></div>
-                </div>
-                <div class="tatsu-overlay tatsu-section-overlay"></div>
-            </div>
-
         </div>
     </div>
 @endsection

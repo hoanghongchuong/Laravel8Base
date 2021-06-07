@@ -7,25 +7,25 @@
 @endsection()
 @section('content')
     <div class="content-wrapper">
-        @include('admin.partials.content_header', ['name' => 'Category', 'key' => 'Add'])
+        @include('admin.partials.content_header', ['name' => 'Post', 'key' => 'Add'])
         <form action="{{route('post.store')}}" method="post" enctype="multipart/form-data">
             {{csrf_field()}}
             <input type="hidden" value="{{$type}}" name="type">
             <div class="content">
                 <div class="container-fluid">
-                    @if($type != 'about' && $type != 'service' && $type !='expertise' && $type !='equipment')
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="">Danh mục cha</label>
-                                    <select name="category_id" id="" class="form-control select2-init">
-                                        <option value="">Chọn danh mục cha</option>
-                                        {!! $htmlOption !!}
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    @endif
+{{--                    @if($type != 'about' && $type != 'service' && $type !='expertise' && $type !='equipment')--}}
+{{--                        <div class="row">--}}
+{{--                            <div class="col-md-4">--}}
+{{--                                <div class="form-group">--}}
+{{--                                    <label for="">Danh mục cha</label>--}}
+{{--                                    <select name="category_id" id="" class="form-control select2-init">--}}
+{{--                                        <option value="">Chọn danh mục cha</option>--}}
+{{--                                        {!! $htmlOption !!}--}}
+{{--                                    </select>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    @endif--}}
                     <ul class="nav nav-tabs" role="tablist">
                         <li class="nav-item">
                             <a class="nav-link active" href="#tab1" role="tab" data-toggle="tab">Tiếng việt</a>

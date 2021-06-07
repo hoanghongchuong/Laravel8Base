@@ -20,19 +20,19 @@
                             <strong>{{ $message }}</strong>
                         </div>
                     @endif
-                    @if($type != 'about'  && $type != 'service' && $type !='expertise'  && $type !='equipment')
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label for="">Danh mục cha</label>
-                                <select name="category_id" id="" class="form-control select2-init">
-                                    <option value="">Chọn danh mục cha</option>
-                                    {!! $htmlOption !!}
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    @endif
+{{--                    @if($type != 'about'  && $type != 'service' && $type !='expertise'  && $type !='equipment')--}}
+{{--                    <div class="row">--}}
+{{--                        <div class="col-md-4">--}}
+{{--                            <div class="form-group">--}}
+{{--                                <label for="">Danh mục cha</label>--}}
+{{--                                <select name="category_id" id="" class="form-control select2-init">--}}
+{{--                                    <option value="">Chọn danh mục cha</option>--}}
+{{--                                    {!! $htmlOption !!}--}}
+{{--                                </select>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    @endif--}}
                     <ul class="nav nav-tabs" role="tablist">
                         <li class="nav-item">
                             <a class="nav-link active" href="#tab1" role="tab" data-toggle="tab">Tiếng việt</a>
