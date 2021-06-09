@@ -59,4 +59,22 @@ class HomeController extends Controller
         $title = $item['name_'.$lang];
         return view("frontend.pages.detail_about", compact('item', 'title', 'lang'));
     }
+
+    public function technology() {
+        $lang = Session::get('website_language');
+        $title = trans('technology_ras');
+        $problems = Post::where('status_vi', 1)->where('type', 'problem')->orderBy('id','asc')->get();
+        $problems->map(function ($problem) {
+            $problem->image_vi = $problem->image;
+            return $problem;
+        });
+        $solutions = Post::where('status_vi', 1)->where('type', 'solution')->orderBy('id','asc')->get();
+        $solutions->map(function ($sl) {
+            $sl->image_vi = $sl->image;
+            return $sl;
+        });
+        $postTech = Post::where('status_vi', 1)->where('type', 'post-tech')->orderBy('id','asc')->get();
+
+        return view('frontend.pages.technology', compact('lang', 'title', 'problems', 'solutions', 'postTech'));
+    }
 }

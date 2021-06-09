@@ -98,6 +98,7 @@ Route::group([/**'prefix' => Session::get('website_language') ,*/ 'middleware' =
     Route::get('/trang-thiet-bi', [HomeController::class, 'equipment']);
     Route::get('/trang-thiet-bi/{id}.html', [HomeController::class, 'equipmentDetail']);
     Route::get('/bai-viet/{id}.html', [HomeController::class, 'postDetail']);
+    Route::get('/cong-nghe', [HomeController::class, 'technology']);
 
     Route::get('/lien-he', [\App\Http\Controllers\ContactController::class, 'index']);
     Route::post('send-contact', [\App\Http\Controllers\ContactController::class, 'sendContact'])->name('send.contact');

@@ -15,7 +15,7 @@
                 </div>
             </div>
         </div>
-        <div class="tatsu-section-background-wrap">
+        <div class="tatsu-section-background-wrap bg-service">
             <div class="tatsu-section-background tatsu-bg-lazyload tatsu-bg-lazyloaded"></div>
         </div>
         <div class="tatsu-overlay tatsu-section-overlay"></div>
