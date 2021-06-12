@@ -58,7 +58,7 @@
                                 <td>{{$item->created_at}}</td>
                                 <td>
                                     <a href="/admin/post/edit/{{$item->id}}?type={{$type}}" class="btn btn-primary">Edit</a>
-                                    <a href="{{route('post.delete', $item->id)}}" class="btn btn-danger">Delete</a>
+                                    <a href="" class="btn btn-danger action-delete" data-url="{{route('post.delete', $item->id)}}">Delete</a>
                                 </td>
                             </tr>
                             @endforeach
@@ -70,4 +70,46 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('js')
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        $(document).on('click', '.action-delete', function (e) {
+            e.preventDefault();
+            let urlRequest = $(this).attr('data-url');
+            let that = $(this);
+            Swal.fire({
+                title: 'Bạn có chắc muốn xóa?',
+                text: "Bạn sẽ không khôi phục lại được!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Ok!',
+                cancelButtonText: 'Hủy!',
+            }).then((result) => {
+                console.log(result);
+                if (result.isConfirmed) {
+                    $.ajax({
+                        type: 'GET',
+                        url: urlRequest,
+                        success: function (data) {
+                            if(data.code == 200) {
+                                that.parent().parent().remove();
+                            }
+                        },
+                        error: function (err) {
+
+                        }
+                    });
+                    Swal.fire(
+                        'Đã Xóa!',
+                        'Bạn đã xóa thành công.',
+                        'success'
+                    )
+                }
+            })
+        })
+    </script>
 @endsection

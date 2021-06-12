@@ -62,15 +62,18 @@ class UserController extends Controller
     }
 
     public function update(Request $request, $id) {
-
+//        dd($request->password);
         DB::beginTransaction();
         try {
             $user = $this->user->findOrFail($id);
-            $user->update([
+            $dataUpdate = [
                 'name' => $request->name,
                 'email' => $request->email,
-                'password' => Hash::make($request->password)
-            ]);
+            ];
+            if($request->password) {
+                $dataUpdate['password'] = Hash::make($request->password);
+            }
+            $user->update($dataUpdate);
             $user = $this->user->find($id);
             $user->roles()->sync($request->role_id);
             DB::commit();
@@ -78,11 +81,12 @@ class UserController extends Controller
             DB::rollBack();
             return back()->withError($exception->getMessage())->withInput();
         }
-        return redirect()->back()->with('success', 'Sửa thành công');
+        return redirect()->back()->with('success', 'Cập nhật thành công');
 
     }
     public function delete($id) {
-
+        $user = $this->user->findOrFail($id);
+        dd($user);
     }
 
 

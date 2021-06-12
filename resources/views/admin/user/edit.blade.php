@@ -11,6 +11,7 @@
         @include('admin.partials.content_header', ['name' => 'User', 'key' => 'Edit'])
         <div class="content">
             <div class="container-fluid">
+                @include('flash-message')
                 <div class="row">
                     <div class="col-md-6">
                         <form action="{{route('users.update', $user->id)}}" method="post" enctype="multipart/form-data">
@@ -27,7 +28,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="">Password</label>
-                                <input type="password" placeholder="Password" class="form-control" name="password" value="{{$user->password}}">
+                                <input type="password" placeholder="*****" class="form-control" name="password" value="">
                             </div>
                             <div class="form-group">
                                 <label for="">Chọn vai trò</label>

@@ -9,12 +9,14 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\UploadRequest;
 use App\Models\Category;
 use App\Models\Post;
+use App\Traits\StorageImageTrait;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 class PostController extends Controller
 {
+    use StorageImageTrait;
     private $category;
     private $post;
 
@@ -46,11 +48,12 @@ class PostController extends Controller
     public function store(UploadRequest $request)
     {
         $input = $request->all();
+//        $dataUpload = $this->storageTraitUpload($request, 'image_vi', 'public/image');
+
         if($request->has('image_vi')) {
             $file = $request->file('image_vi');
             $filePath = $file->store('public/image');
             $input['image_vi'] = $filePath;
-
         }
         $input['slug_vi'] = isset($input['name_vi']) ? Str::slug($input['name_vi']) : '';
         $input['slug_en'] = isset($input['name_en']) ? Str::slug($input['name_en']) : '';
@@ -96,7 +99,11 @@ class PostController extends Controller
     {
         $post = $this->post->findOrFail($id);
         $post->delete();
-        return back()->with('success', 'Delete successfully');
+
+        return response()->json([
+           'code' => 200,
+           'message' => 'success'
+        ], 200);
     }
 
     public function getCategory($parent_id, $type)
