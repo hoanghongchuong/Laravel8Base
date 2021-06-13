@@ -12,11 +12,15 @@ class Post extends Model
 
     protected $fillable = [
         'category_id', 'name_vi', 'name_en', 'slug_vi', 'slug_en', 'description_vi', 'description_en', 'content_vi',
-        'content_en', 'image_vi', 'image_en', 'status_vi', 'status_en', 'type'
+        'content_en', 'image_vi', 'image_en', 'status_vi', 'status_en', 'type','icon'
     ];
     public function getImageAttribute()
     {
         return !empty($this->attributes['image_vi']) ? Storage::url($this->attributes['image_vi']) : Storage::url('image/no-image.png');
+    }
+    public function getIconAttribute()
+    {
+        return !empty($this->attributes['icon']) ? Storage::url($this->attributes['icon']) : Storage::url('image/no-image.png');
     }
     public function getPostPaginate($type) {
         return $this->where('type', $type)->paginate(20);

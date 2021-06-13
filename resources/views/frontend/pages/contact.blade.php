@@ -93,7 +93,7 @@
                                 </div>
                                 <!--Grid row-->
                                 <div class="text-center text-md-left">
-                                    <div class="get-more-info">
+                                    <div class="get-more-info btn-send-contact">
                                         <button type="submit" class="btn btn-primary">{{trans('send')}}</button>
                                     </div>
                                 </div>
@@ -103,20 +103,38 @@
                         <!--Grid column-->
 
                         <!--Grid column-->
-                        <div class="col-md-3 text-center info-contact">
-                            <ul class="list-unstyled mb-0">
-                                <li><i class="fa fa-map-marker fa-2x"></i>
-                                    <p>{{$setting["address_".$lang]}}</p>
-                                </li>
+                        <div class="col-md-3 info-contact">
+                            <div class="row">
+                                <div class="col-xs-3 col-md-3">
+                                    <img src="{{asset('/frontend/images/icon_add.png')}}" alt="">
+                                </div>
+                                <div class="col-xs-9 col-md-9 contact-info">
+                                    <p>{{trans('contact_address')}}</p>
+                                    {{$setting["address_".$lang]}}
+                                </div>
+                            </div>
+                            <div class="row mt-30">
+                                <div class="col-xs-3 col-md-3">
+                                    <img src="{{asset('/frontend/images/icon_email.png')}}" alt="">
+                                </div>
+                                <div class="col-xs-9 col-md-9 contact-info">
+                                    <p>{{trans('email_us')}}</p>
+                                    {{$setting["email"]}}
+                                </div>
+                            </div>
+{{--                            <ul class="list-unstyled mb-0">--}}
+{{--                                <li><i class="fa fa-map-marker fa-2x"></i>--}}
+{{--                                    <p>{{$setting["address_".$lang]}}</p>--}}
+{{--                                </li>--}}
 
-                                <li><i class="fa fa-phone mt-4 fa-2x"></i>
-                                    <p>{{$setting["phone"]}}</p>
-                                </li>
+{{--                                <li><i class="fa fa-phone mt-4 fa-2x"></i>--}}
+{{--                                    <p>{{$setting["phone"]}}</p>--}}
+{{--                                </li>--}}
 
-                                <li><i class="fa fa-envelope mt-4 fa-2x"></i>
-                                    <p>{{$setting["email"]}}</p>
-                                </li>
-                            </ul>
+{{--                                <li><i class="fa fa-envelope mt-4 fa-2x"></i>--}}
+{{--                                    <p>{{$setting["email"]}}</p>--}}
+{{--                                </li>--}}
+{{--                            </ul>--}}
                         </div>
                         <!--Grid column-->
 

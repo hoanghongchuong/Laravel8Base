@@ -38,33 +38,17 @@
     <div class="section clearfix tatsu-wrap">
         <div class="container">
             <div class="row our-service pdb-100 pdt-10">
+                @foreach($services as $service)
                 <div class="col-xs-12 col-md-4">
                     <div class="col-xs-2 col-md-2">
-                        <img src="images/aquarium1.png" alt="" class="tatsu-icon_card-icon">
+                        <img src="{{$service->icon_url}}" alt="" class="tatsu-icon_card-icon">
                     </div>
                     <div class="col-xs-10 col-md-10 pdl-mobile-25">
-                        <h3> MINI INDOOR AQUACULTURE SYSTEMS </h3>
-                        <p class="text-des">Our Mini Indoor Systems provide optimum indoor growing conditions for small to medium-sized aquaculture projects.</p>
+                        <h3> {{$service['name_'.$lang]}} </h3>
+                        <p class="text-des">{{$service['description_'.$lang]}}</p>
                     </div>
                 </div>
-                <div class="col-xs-12 col-md-4">
-                    <div class="col-xs-2 col-md-2">
-                        <img src="images/img2.png" alt="" class="tatsu-icon_card-icon">
-                    </div>
-                    <div class="col-xs-10 col-md-10 pdl-mobile-25">
-                        <h3>  POND & CAGE PROJECT DESIGN </h3>
-                        <p class="text-des">Our Mini Indoor Systems provide optimum indoor growing conditions for small to medium-sized aquaculture projects.</p>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-4">
-                    <div class="col-xs-2 col-md-2">
-                        <img src="images/img3.png" alt="" class="tatsu-icon_card-icon">
-                    </div>
-                    <div class="col-xs-10 col-md-10 pdl-mobile-25">
-                        <h3> AQUACULTURE CONSULTANCY </h3>
-                        <p class="text-des">Our Mini Indoor Systems provide optimum indoor growing conditions for small to medium-sized aquaculture projects.</p>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
@@ -91,7 +75,7 @@
                                 </div>
                             </div>
                         </div>
-                        <p class="mt-30 col-xs-12 col-md-12 pdl-0"><a href="" class="read-more">More detail</a></p>
+                        <p class="mt-30 col-xs-12 col-md-12 pdl-0"><a href="" class="read-more">{{trans('more_detail')}}</a></p>
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-6">

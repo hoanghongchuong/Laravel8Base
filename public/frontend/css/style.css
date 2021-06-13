@@ -106,7 +106,7 @@ a:hover {
     position: relative;
 }
 ul.gt {
-    width: 200px;
+    width: 225px;
 }
 .navi > li {
     float: left;
@@ -139,6 +139,9 @@ ul.gt {
     border-top: 1px solid #020202;
     max-height: 420px;
     border-radius: 4px;
+}
+.vk-menu__child li{
+    line-height: 24px;
 }
 @-webkit-keyframes fadeIn {
     from { opacity: 0; }
@@ -338,7 +341,7 @@ svg:not(:root) {
     line-height: 14px;
 }
 .out-expertise h2 {
-    font-size: 36px;
+    font-size: 34px;
     font-family: Josefin;
     font-weight: 600;
     color: #000;
@@ -353,7 +356,7 @@ svg:not(:root) {
 }
 .tatsu-title {
     font-family: Josefin;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
     color: #000;
 }
@@ -464,7 +467,8 @@ svg:not(:root) {
     text-transform: uppercase;
     padding: 14px 34px;
     border-radius: 32px;
-    font-size: 14px;
+    font-size: 18px;
+    font-weight: bold;
     line-height: 14px;
     font-family: Barlow;
 }
@@ -583,12 +587,12 @@ svg:not(:root) {
 .get-more-info a{
     color: #fff;
     background-color: #2293d7;
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: 600;
     line-height: 12px;
     letter-spacing: 1px;
     text-transform: uppercase;
     border-radius: 25px;
-    font-weight: 400;
     font-style: normal;
     padding: 16px 30px;
 }
@@ -793,4 +797,20 @@ svg:not(:root) {
 }
 .content-tech img{
     max-width: 100%;
+}
+.btn-send-contact .btn-primary{
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.contact-info {
+    padding-top: 13px;
+    font-size: 16px;
+    font-family: Barlow;
+}
+.contact-info p {
+    margin-bottom: 0px;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: Josefin;
 }

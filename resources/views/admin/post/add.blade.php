@@ -40,6 +40,12 @@
                         <div role="tabpanel" class="tab-pane active" id="tab1">
                             <div class="row">
                                 <div class="col-md-6">
+                                    @if($type == 'service')
+                                    <div class="form-group">
+                                        <label>Icon trang chủ</label>
+                                        <input type="file" name="icon_home">
+                                    </div>
+                                    @endif
                                     <div class="form-group">
                                         <label>Chọn ảnh</label>
                                         <input type="file" name="image_vi">

@@ -21,9 +21,14 @@ class ServiceController extends Controller
 
     public function detail($slug) {
         $item = Post::where('slug_vi', $slug)->where('type', 'service')->first();
-        $item->image_vi = $item->image;
-        $lang = Session::get('website_language');
-        $title = $item['name_'.$lang];
-        return view("frontend.pages.detail_service", compact('item', 'title', 'lang'));
+        if($item) {
+            $item->image_vi = $item->image;
+            $lang = Session::get('website_language');
+            $title = $item['name_'.$lang];
+            return view("frontend.pages.detail_service", compact('item', 'title', 'lang'));
+        }
+        else{
+            abort(404);
+        }
     }
 }

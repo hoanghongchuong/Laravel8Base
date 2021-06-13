@@ -24,7 +24,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="">Tên tiếng anh</label>
-                                <input type="text" placeholder="" class="form-control" name="name_en" value="{{$item->name_vi}}">
+                                <input type="text" placeholder="" class="form-control" name="name_en" value="{{$item->name_en}}">
                             </div>
                             <div class="form-group">
                                 <label for="">Link</label>

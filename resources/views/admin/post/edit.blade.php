@@ -46,6 +46,15 @@
                             <div role="tabpanel" class="tab-pane active" id="tab1">
                                 <div class="row">
                                     <div class="col-md-6">
+                                        @if($type == 'service')
+                                            <div class="form-group">
+                                                <div class="box-img mb-3">
+                                                    <img src="{{$post->icon_url}}" alt="">
+                                                </div>
+                                                <label>Icon trang chủ</label>
+                                                <input type="file" name="icon_home">
+                                            </div>
+                                        @endif
                                         @if($type != 'about')
                                         <div class="form-group">
                                             <div class="box-img mb-3">

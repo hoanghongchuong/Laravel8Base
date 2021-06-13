@@ -49,7 +49,11 @@ class PostController extends Controller
     {
         $input = $request->all();
 //        $dataUpload = $this->storageTraitUpload($request, 'image_vi', 'public/image');
-
+        if($request->has('icon_home')) {
+            $file = $request->file('icon_home');
+            $filePath = $file->store('public/image');
+            $input['icon'] = $filePath;
+        }
         if($request->has('image_vi')) {
             $file = $request->file('image_vi');
             $filePath = $file->store('public/image');
@@ -68,6 +72,7 @@ class PostController extends Controller
         $type = $request->type;
         $post = $this->post->findOrFail($id);
         $post->image_vi = $post->image;
+        $post->icon_url = $post->icon;
         $htmlOption = $this->getCategory($post->category_id, $type);
 
         return view('admin.post.edit', compact('post', 'htmlOption', 'type'));
@@ -77,6 +82,11 @@ class PostController extends Controller
     {
         $post = $this->post->findOrFail($id);
         $input = $request->all();
+        if($request->has('icon_home')) {
+            $file = $request->file('icon_home');
+            $filePath = $file->store('public/image');
+            $input['icon'] = $filePath;
+        }
         $oldImage = $post->image_vi;
         if($request->has('image_vi')) {
             $file = $request->file('image_vi');
