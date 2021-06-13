@@ -13,16 +13,18 @@ class SettingController extends Controller
     public function index()
     {
         $setting = Setting::first();
-        $setting->logo_url = $setting->logo;
-        $setting->favicon_url = $setting->favicon;
+        if($setting) {
+            $setting->logo_url = $setting->logo;
+            $setting->favicon_url = $setting->favicon;
+        }
+
         return view('admin.setting.index', compact('setting'));
     }
 
     public function store(Request $request)
     {
         $setting = Setting::where('id', $request->setting_id)->first();
-        $oldLogo = $setting->logo;
-        $oldFavicon = $setting->favicon;
+
         $input = $request->all();
         if($request->has('logo')) {
             $file = $request->file('logo');
@@ -31,10 +33,12 @@ class SettingController extends Controller
         }
         if($request->has('favicon')) {
             $file = $request->file('favicon');
-            $filePath = $file->store('public/image');
-            $input['favicon'] = $filePath;
+            $filePathIcon = $file->store('public/image');
+            $input['favicon'] = $filePathIcon;
         }
         if($setting) {
+            $oldLogo = $setting->logo;
+            $oldFavicon = $setting->favicon;
             $setting->update($input);
             if($request->has('logo')) {
                 Storage::disk()->delete($oldLogo);

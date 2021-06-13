@@ -5,7 +5,7 @@
             <div class="tatsu-section-offset-wrap">
                 <div class="tatsu-row-wrap tatsu-wrap">
                     <div class="tatsu-top">
-                        <h1>Bloom aqua</h1>
+                        <h1>{{$title}}</h1>
                     </div>
                     <div class="tatsu-bottom">
                         <p>Specialists in aquaculture technology solutions</p>
@@ -30,8 +30,7 @@
     <div class="section clearfix tatsu-wrap pdb-100 pdt-10">
         <div class="tatsu-text-inner">
             <h4>
-                We offer a complete range of aquaculture services, from traditional pond and cage design and supply,
-                through to equipment provision, and Mini Indoor Aquaculture Facilities.
+                {{$setting['des_'.$lang]}}
             </h4>
         </div>
     </div>
@@ -56,27 +55,30 @@
         <div class="container ras-technology">
             <div class="row pdb-100 pdt-10">
                 <div class="col-xs-12 col-md-6">
+                    @if($aboutTech)
                     <div class="with-full">
-                        <h2>RAS TECHNOLOGY</h2>
+                        <h2>{{$aboutTech['name_'.$lang]}}</h2>
                         <div class="des">
-                            <p>Recirculating Aquaculture System Technology is the future of aquaculture. Growing in indoor, biosecure conditions allows for high-density production under optimal conditions.</p>
+                            <p>{{$aboutTech['description_'.$lang]}}</p>
                         </div>
-                        <div class="mt-30 col-xs-12 col-md-12 pdl-0 pdr-0">
-                            <div class="col-xs-12 col-md-6 pdl-0">
-                                <p><img src="{{asset('/frontend/images/img5.png')}}" class="tatsu-icon_card-icon" alt=""></p>
-                                <div class="des">
-                                    <p>A more sustainable production – water recirculation and advanced water treatment ensures significantly reduced water pollution from feed, faeces, and chemical waste.</p>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-md-6 pdl-0">
-                                <p><img src="{{asset('/frontend/images/img4.png')}}" class="tatsu-icon_card-icon" alt=""></p>
-                                <div class="des">
-                                    <p>A more sustainable production – water recirculation and advanced water treatment ensures significantly reduced water pollution from feed, faeces, and chemical waste.</p>
-                                </div>
-                            </div>
+                        <div class="col-xs-12 col-md-12 pdl-0 pdr-0">
+                            {!! $aboutTech['content_'.$lang] !!}
+{{--                            <div class="col-xs-12 col-md-6 pdl-0">--}}
+{{--                                <p><img src="{{asset('/frontend/images/img5.png')}}" class="tatsu-icon_card-icon" alt=""></p>--}}
+{{--                                <div class="des">--}}
+{{--                                    <p>A more sustainable production – water recirculation and advanced water treatment ensures significantly reduced water pollution from feed, faeces, and chemical waste.</p>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-xs-12 col-md-6 pdl-0">--}}
+{{--                                <p><img src="{{asset('/frontend/images/img4.png')}}" class="tatsu-icon_card-icon" alt=""></p>--}}
+{{--                                <div class="des">--}}
+{{--                                    <p>A more sustainable production – water recirculation and advanced water treatment ensures significantly reduced water pollution from feed, faeces, and chemical waste.</p>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
                         </div>
-                        <p class="mt-30 col-xs-12 col-md-12 pdl-0"><a href="" class="read-more">{{trans('more_detail')}}</a></p>
+                        <p class="mt-30 col-xs-12 col-md-12 pdl-0"><a href="{{url('cong-nghe')}}" class="read-more">{{trans('more_detail')}}</a></p>
                     </div>
+                        @endif
                 </div>
                 <div class="col-xs-12 col-md-6">
                     <div class="box-img pdt-30">

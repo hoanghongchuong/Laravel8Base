@@ -54,6 +54,12 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/admin/post?type=about-tech" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Giới thiệu công nghệ</p>
+                            </a>
+                        </li>
 {{--                        <li class="nav-item">--}}
 {{--                            <a href="/admin/categories?type=post" class="nav-link">--}}
 {{--                                <i class="far fa-circle nav-icon"></i>--}}

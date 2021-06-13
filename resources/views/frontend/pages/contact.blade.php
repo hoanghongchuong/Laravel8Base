@@ -9,13 +9,13 @@
                     </div>
                     <div class="tatsu-bottom">
                         <div class="des-about">
-                            <p>BOUTIQUE CONSULTANCY SPECIALISING IN TECHNOLOGY SOLUTIONS FOR AQUACULTURE.</p>
+{{--                            <p>BOUTIQUE CONSULTANCY SPECIALISING IN TECHNOLOGY SOLUTIONS FOR AQUACULTURE.</p>--}}
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="tatsu-section-background-wrap">
+        <div class="tatsu-section-background-wrap  contact-bg">
             <div class="tatsu-section-background tatsu-bg-lazyload tatsu-bg-lazyloaded"></div>
         </div>
         <div class="tatsu-overlay tatsu-section-overlay"></div>

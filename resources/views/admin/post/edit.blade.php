@@ -40,6 +40,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#tab2" role="tab" data-toggle="tab">English</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#tab3" role="tab" data-toggle="tab">Español</a>
+                        </li>
                     </ul>
                         <!-- Tab panes -->
                     <div class="tab-content mt-10">
@@ -91,7 +94,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-12">
-                                        <button class="btn btn-primary mb-2">Save</button>
+                                        <button class="btn btn-primary mb-2">Lưu</button>
                                     </div>
                                 </div>
                             </div>
@@ -126,11 +129,46 @@
 {{--                                        </div>--}}
                                     </div>
                                     <div class="col-md-12">
-                                        <button class="btn btn-primary mb-2">Save</button>
+                                        <button class="btn btn-primary mb-2">Lưu</button>
                                     </div>
                                 </div>
                             </div>
+                            <div role="tabpanel" class="tab-pane fade" id="tab3">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="">Tên bài viết</label>
+                                        <input type="text" placeholder="" class="form-control" value="{{$post->name_es}}" name="name_es">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">Mô tả</label>
+                                        <textarea type="text" placeholder="" class="form-control" name="description_es">{!! $post->description_es !!}
+                                            </textarea>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="">Nội dung</label>
+                                        <textarea type="text" placeholder="" id="" class="form-control tinymce-editor-init" name="content_es" rows="12">{!! $post->content_es !!}</textarea>
+                                    </div>
+                                    {{--                                        <div class="form-group">--}}
+                                    {{--                                            <label>Hiển thị</label>--}}
+                                    {{--                                            <div class="icheck-primary d-inline">--}}
+                                    {{--                                                <input type="checkbox" id="checkboxPrimary2" @if($post->status_en)checked @endif name="status_en">--}}
+                                    {{--                                                <label for="checkboxPrimary2">--}}
+                                    {{--                                                </label>--}}
+                                    {{--                                            </div>--}}
+                                    {{--                                        </div>--}}
+                                </div>
+                                <div class="col-md-12">
+                                    <button class="btn btn-primary mb-2">Lưu</button>
+                                </div>
+                            </div>
                         </div>
+                    </div>
                 </div>
             </div>
         </form>

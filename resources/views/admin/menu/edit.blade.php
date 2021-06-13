@@ -27,6 +27,10 @@
                                 <input type="text" placeholder="" class="form-control" name="name_en" value="{{$item->name_en}}">
                             </div>
                             <div class="form-group">
+                                <label for="">Tên Español</label>
+                                <input type="text" placeholder="" class="form-control" name="name_es" value="{{$item->name_es}}">
+                            </div>
+                            <div class="form-group">
                                 <label for="">Link</label>
                                 <input type="text" placeholder="" class="form-control" name="slug" value="{{$item->slug}}">
                             </div>

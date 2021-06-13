@@ -12,7 +12,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
-                        <a href="/admin/post/create?type={{$type}}" class="btn btn-success float-right mb-2">Add Post</a>
+                        <a href="/admin/post/create?type={{$type}}" class="btn btn-success float-right mb-2">Thêm mới</a>
                     </div>
                     <div class="col-lg-12">
                         <table class="table">
@@ -57,8 +57,8 @@
                                 @endif
                                 <td>{{$item->created_at}}</td>
                                 <td>
-                                    <a href="/admin/post/edit/{{$item->id}}?type={{$type}}" class="btn btn-primary">Edit</a>
-                                    <a href="" class="btn btn-danger action-delete" data-url="{{route('post.delete', $item->id)}}">Delete</a>
+                                    <a href="/admin/post/edit/{{$item->id}}?type={{$type}}" class="btn btn-primary">Sửa</a>
+                                    <a href="" class="btn btn-danger action-delete" data-url="{{route('post.delete', $item->id)}}">Xóa</a>
                                 </td>
                             </tr>
                             @endforeach

@@ -814,3 +814,6 @@ svg:not(:root) {
     font-size: 16px;
     font-family: Josefin;
 }
+.contact-bg .tatsu-section-background {
+    background-image: url(https://www.bloom-aqua.com/wp-content/uploads/2020/01/jet-kim-_w-VVA8PrC0-unsplash.jpg);
+}

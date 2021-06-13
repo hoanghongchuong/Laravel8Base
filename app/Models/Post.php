@@ -11,8 +11,14 @@ class Post extends Model
     use HasFactory;
 
     protected $fillable = [
-        'category_id', 'name_vi', 'name_en', 'slug_vi', 'slug_en', 'description_vi', 'description_en', 'content_vi',
-        'content_en', 'image_vi', 'image_en', 'status_vi', 'status_en', 'type','icon'
+        'category_id', 'name_vi', 'name_en', 'name_es', 'slug_vi', 'slug_en',
+        'description_vi',
+        'description_en',
+        'description_es',
+        'content_vi',
+        'content_en',
+        'content_es',
+        'image_vi', 'image_en', 'status_vi', 'status_en', 'type','icon'
     ];
     public function getImageAttribute()
     {

@@ -14,6 +14,7 @@ $menus = \App\Models\Menu::where('parent_id', 0)->orderBy('order', 'asc')->get()
                     <p class="text-right">
                         <a href="/change-language/vi"><img src="{{asset('storage/public/image/vn.png')}}" width="25px" alt=""></a>
                         <a href="/change-language/en"><img src="{{asset('storage/public/image/en.png')}}" width="25px" alt=""></a>
+                        <a href="/change-language/es"><img src="{{asset('frontend/images/es.png')}}" width="25px" alt=""></a>
                     </p>
                 </div>
             </div>

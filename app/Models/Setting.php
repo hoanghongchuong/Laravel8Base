@@ -10,8 +10,29 @@ class Setting extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['facebook', 'instagram', 'youtube', 'zalo', 'email','name_vi','name_en','title_vi','company_vi',
-        'title_en','company_en','address_vi','address_en','phone','hotline','logo','des_vi','des_en','copyright','iframe_map',
+    protected $fillable = ['facebook', 'instagram', 'youtube', 'zalo', 'email','name_vi',
+        'name_en',
+        'name_es',
+        'title_vi',
+        'title_en',
+        'title_es',
+        'company_vi',
+        'company_en',
+        'company_es',
+        'address_vi',
+        'address_en',
+        'address_es',
+        'phone','hotline','logo',
+        'des_vi',
+        'des_en',
+        'des_es',
+        'description_vi',
+        'description_en',
+        'description_es',
+        'keyword_vi',
+        'keyword_en',
+        'keyword_es',
+        'copyright','iframe_map',
         'favicon', 'twitter', 'social_in', 'favicon'];
 
     public function getLogoAttribute() {

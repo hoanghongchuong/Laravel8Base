@@ -18,13 +18,18 @@ class CreatePostsTable extends Migration
             $table->integer('category_id')->nullable();
             $table->string('name_vi')->nullable();
             $table->string('name_en')->nullable();
+            $table->string('name_es')->nullable();
             $table->string('slug_vi')->nullable();
             $table->string('slug_en')->nullable();
+            $table->string('slug_es')->nullable();
             $table->text('description_vi')->nullable();
             $table->text('description_en')->nullable();
+            $table->text('description_es')->nullable();
             $table->text('content_vi')->nullable();
             $table->text('content_en')->nullable();
+            $table->text('content_es')->nullable();
             $table->string('image_vi')->nullable();
+            $table->string('icon')->nullable();
             $table->string('image_en')->nullable();
             $table->boolean('status_vi')->default(true);
             $table->boolean('status_en')->default(true);

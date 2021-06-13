@@ -32,7 +32,12 @@ class HomeController extends Controller
         $services->map(function ($eq) {
             $eq->icon_url = $eq->icon;
         });
-        return view('frontend.pages.home', compact('title', 'lang', 'equipments', 'posts', 'expertise', 'services'));
+        $aboutTech = Post::where('status_vi', 1)->where('type', 'about-tech')->orderBy('id','desc')->first();
+        if($aboutTech) {
+            $aboutTech->img_url = $aboutTech->image;
+        }
+
+        return view('frontend.pages.home', compact('title', 'lang', 'equipments', 'posts', 'expertise', 'services','aboutTech', 'setting'));
     }
     public function changeLanguage(Request $request) {
         $language = $request->language;

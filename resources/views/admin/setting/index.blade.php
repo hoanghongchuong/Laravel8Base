@@ -46,16 +46,24 @@
                                         <input type="text" placeholder="" class="form-control" value="{{$setting ? $setting->company_en : ''}}" name="company_en">
                                     </div>
                                     <div class="form-group">
+                                        <label for="">Tên công ty(Español)</label>
+                                        <input type="text" placeholder="" class="form-control" value="{{$setting ? $setting->company_es : ''}}" name="company_es">
+                                    </div>
+                                    <div class="form-group">
                                         <label for="">Email</label>
-                                        <input type="text" placeholder="" class="form-control"value="{{$setting ? $setting->email : ''}}" name="email">
+                                        <input type="text" placeholder="" class="form-control" value="{{$setting ? $setting->email : ''}}" name="email">
                                     </div>
                                     <div class="form-group">
                                         <label for="">Địa chỉ(Tiếng việt)</label>
-                                        <input type="text" placeholder="" class="form-control"value="{{$setting ? $setting->address_vi: ''}}" name="address_vi">
+                                        <input type="text" placeholder="" class="form-control" value="{{$setting ? $setting->address_vi: ''}}" name="address_vi">
                                     </div>
                                     <div class="form-group">
                                         <label for="">Địa chỉ(Tiếng anh)</label>
-                                        <input type="text" placeholder="" class="form-control"value="{{$setting ? $setting->address_en: ''}}" name="address_en">
+                                        <input type="text" class="form-control" value="{{$setting ? $setting->address_en: ''}}" name="address_en">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">Địa chỉ(Tiếng Español)</label>
+                                        <input type="text" class="form-control" value="{{$setting ? $setting->address_es: ''}}" name="address_es">
                                     </div>
                                     <div class="form-group">
                                         <label for="">Số điện thoại</label>
@@ -75,7 +83,10 @@
                                     <div class="form-group">
                                         <label for="">Mô tả ngắn(Tiếng anh)</label>
                                         <textarea type="text" placeholder="" class="form-control" name="des_en">{{$setting ? $setting->des_en : ''}}</textarea>
-
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">Mô tả ngắn(Tiếng Español)</label>
+                                        <textarea type="text" placeholder="" class="form-control" name="des_es">{{$setting ? $setting->des_es : ''}}</textarea>
                                     </div>
                                 </div>
 
@@ -84,10 +95,10 @@
                                         <label for="">Facebook</label>
                                         <input type="text" placeholder="" class="form-control" value="{{$setting ? $setting->facebook : ''}}" name="facebook">
                                     </div>
-                                    <div class="form-group">
-                                        <label for="">Zalo</label>
-                                        <input type="text" placeholder="" class="form-control" value="{{$setting ? $setting->zalo : ''}}" name="zalo">
-                                    </div>
+{{--                                    <div class="form-group">--}}
+{{--                                        <label for="">Zalo</label>--}}
+{{--                                        <input type="text" placeholder="" class="form-control" value="{{$setting ? $setting->zalo : ''}}" name="zalo">--}}
+{{--                                    </div>--}}
                                     <div class="form-group">
                                         <label for="">Instagram</label>
                                         <input type="text" placeholder="" class="form-control" value="{{$setting ? $setting->instagram : ''}}" name="instagram">
@@ -96,14 +107,14 @@
                                         <label for="">Youtube</label>
                                         <input type="text" placeholder="" class="form-control" value="{{$setting ? $setting->youtube : ''}}" name="youtube">
                                     </div>
-                                    <div class="form-group">
-                                        <label for="">Twitter</label>
-                                        <input type="text" placeholder="" class="form-control" value="{{$setting ? $setting->twitter : ''}}" name="twitter">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="">In</label>
-                                        <input type="text" placeholder="" class="form-control" value="{{$setting ? $setting->social_in : ''}}" name="social_in">
-                                    </div>
+{{--                                    <div class="form-group">--}}
+{{--                                        <label for="">Twitter</label>--}}
+{{--                                        <input type="text" placeholder="" class="form-control" value="{{$setting ? $setting->twitter : ''}}" name="twitter">--}}
+{{--                                    </div>--}}
+{{--                                    <div class="form-group">--}}
+{{--                                        <label for="">In</label>--}}
+{{--                                        <input type="text" placeholder="" class="form-control" value="{{$setting ? $setting->social_in : ''}}" name="social_in">--}}
+{{--                                    </div>--}}
                                     <div class="form-group">
                                         <label for="">Bản đồ</label>
                                         <input type="text" placeholder="" class="form-control" value="{{$setting ? $setting->iframe_map: ''}}" name="iframe_map">
