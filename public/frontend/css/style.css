@@ -1,6 +1,7 @@
 *{padding:0;margin:0;}
 
 a:hover{text-decoration:none !important}
+a{text-decoration:none !important}
 ul li{list-style: none;}
 .clear{
     clear: both;
@@ -78,7 +79,8 @@ a:hover {
 .header-top {
     box-sizing: border-box;
     align-items: center;
-    background: rgba(0,63,106,0.8);
+    /*background: rgba(0,63,106,0.8);*/
+    background: #0d4e96;
     border-color: rgba(0,0,0,0);
     font-size: 16px;
     font-weight: 400;
@@ -477,9 +479,9 @@ svg:not(:root) {
     font-family: Josefin;
 }
 .footer h6 {
-    font-size: 16px;
+    font-size: 20px;
     line-height: 26px;
-    color: #000000;
+    color: #0D4E96;
     font-weight: 600;
 }
 .footer .des {
@@ -628,7 +630,7 @@ svg:not(:root) {
 }
 .contact-content h2{
     font-size: 36px;
-    color: #1a1a1a;
+    color: #0D4E96;
     font-family: Josefin;
     line-height: 40px;
     font-weight: 600;
@@ -733,7 +735,7 @@ svg:not(:root) {
 .content-problem h3 {
     text-align: center;
     font-family: Josefin;
-    color: #000;
+    color: #0D4E96;
     text-transform: uppercase;
     font-size: 22px;
     font-weight: 600;
@@ -799,9 +801,15 @@ svg:not(:root) {
     max-width: 100%;
 }
 .btn-send-contact .btn-primary{
-    font-size: 16px;
-    text-transform: uppercase;
-    font-weight: 600;
+    /*font-size: 16px;*/
+    /*text-transform: uppercase;*/
+    /*font-weight: 600;*/
+    /*background-color: #0D4E96;*/
+    padding: 10px 30px;
+    background: #0D4E96;
+    color: #fff;
+    font-size: 17px;
+    border-radius: 0;
 }
 .contact-info {
     padding-top: 13px;
@@ -813,7 +821,12 @@ svg:not(:root) {
     font-weight: bold;
     font-size: 16px;
     font-family: Josefin;
+    color: #0D4E96;
 }
 .contact-bg .tatsu-section-background {
     background-image: url(https://www.bloom-aqua.com/wp-content/uploads/2020/01/jet-kim-_w-VVA8PrC0-unsplash.jpg);
+}
+.img-logo {
+    width: 74px;
+    height: 42px;
 }

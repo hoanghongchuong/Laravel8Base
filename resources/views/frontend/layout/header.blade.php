@@ -23,8 +23,11 @@ $menus = \App\Models\Menu::where('parent_id', 0)->orderBy('order', 'asc')->get()
     <div class="main-nav tatsu-header">
         <div class="container">
             <div class="row tatsu-header-row tatsu-wrap">
-                <div class="col-md-3 col-xs-6">
-                    <a href="{{url('')}}"><img src="{{$setting->logo}}" alt=""></a>
+                <div class="col-md-3 col-xs-6 tac">
+                    <a href="{{url('')}}">
+                        <img src="{{$setting->logo}}" alt="" class="img-logo">
+{{--                        RasVN--}}
+                    </a>
                 </div>
                 <div class="col-md-9 col-xs-6">
                     <div class="visible-xs menu-mobile">

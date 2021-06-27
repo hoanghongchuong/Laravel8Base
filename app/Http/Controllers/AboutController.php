@@ -22,7 +22,7 @@ class AboutController extends Controller
     public function detail($slug) {
         $item = Post::where('slug_vi', $slug)->where('type', 'about')->first();
         $lang = Session::get('website_language');
-        $title = $item['name_'.$lang];
+        $title = isset($item['name_'.$lang]) ? $item['name_'.$lang] : '';
         return view("frontend.pages.detail_about", compact('item', 'title', 'lang'));
     }
 }

@@ -5,11 +5,11 @@
             <div class="tatsu-section-offset-wrap">
                 <div class="tatsu-row-wrap tatsu-wrap">
                     <div class="tatsu-top">
-                        <h1>{{$item['name_'.$lang]}}</h1>
+                        <h1>{{@$item['name_'.$lang]}}</h1>
                     </div>
                     <div class="tatsu-bottom">
                         <div class="des-about">
-                            <p>{!! $item['description_'.$lang] !!}</p>
+                            <p>{!! @$item['description_'.$lang] !!}</p>
                         </div>
                     </div>
                 </div>
@@ -34,7 +34,7 @@
         <div class="container">
             <div class="row mt-30 pdb-100">
                 <div class="content-about col-xs-12 col-md-12">
-                     {!! $item['content_'.$lang]  !!}
+                     {!! @$item['content_'.$lang]  !!}
                 </div>
             </div>
         </div>
