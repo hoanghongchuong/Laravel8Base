@@ -36,9 +36,9 @@ class Setting extends Model
         'favicon', 'twitter', 'social_in', 'favicon'];
 
     public function getLogoAttribute() {
-        return !empty($this->attributes['logo']) ? Storage::url($this->attributes['logo']) : '';
+        return !empty($this->attributes['logo']) ? asset($this->attributes['logo']) : '';
     }
     public function getFaviconAttribute() {
-        return !empty($this->attributes['favicon']) ? Storage::url($this->attributes['favicon']) : '';
+        return !empty($this->attributes['favicon']) ? asset($this->attributes['favicon']) : '';
     }
 }

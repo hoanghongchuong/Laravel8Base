@@ -14,7 +14,7 @@ class SettingController extends Controller
     {
         $setting = Setting::first();
         if($setting) {
-            $setting->logo_url = $setting->logo;
+            $setting->logo_url = asset($setting->logo);
             $setting->favicon_url = $setting->favicon;
         }
 
@@ -24,16 +24,27 @@ class SettingController extends Controller
     public function store(Request $request)
     {
         $setting = Setting::where('id', $request->setting_id)->first();
-
+        $path_img='upload/images';
         $input = $request->all();
         if($request->has('logo')) {
-            $file = $request->file('logo');
-            $filePath = $file->store('public/image');
-            $input['logo'] = $filePath;
+//            $file = $request->file('logo');
+//            $filePath = $file->store('public/image');
+//            $input['logo'] = $filePath;
+
+            $img = $request->file('logo');
+            $img_name='';
+            if(!empty($img)){
+                $img_name=time().'_'.$img->getClientOriginalName();
+                $img->move($path_img,$img_name);
+                $input['logo'] = $path_img.'/'.$img_name;
+            }
         }
         if($request->has('favicon')) {
             $file = $request->file('favicon');
-            $filePathIcon = $file->store('public/image');
+//            $filePathIcon = $file->store('public/image');
+            $file_name = time().'_'.$file->getClientOriginalName();
+            $filePathIcon = $path_img.'/'.$file_name;
+            $file->move($path_img, $file_name);
             $input['favicon'] = $filePathIcon;
         }
         if($setting) {
