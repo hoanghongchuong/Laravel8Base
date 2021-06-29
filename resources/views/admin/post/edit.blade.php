@@ -52,7 +52,7 @@
                                         @if($type == 'service')
                                             <div class="form-group">
                                                 <div class="box-img mb-3">
-                                                    <img src="{{$post->icon_url}}" alt="">
+                                                    <img src="{{asset($post->icon)}}" alt="">
                                                 </div>
                                                 <label>Icon trang chủ</label>
                                                 <input type="file" name="icon_home">
@@ -61,7 +61,7 @@
                                         @if($type != 'about')
                                         <div class="form-group">
                                             <div class="box-img mb-3">
-                                                <img src="{{$post->image_vi}}" alt="">
+                                                <img src="{{asset($post->image_vi)}}" alt="">
                                             </div>
                                             <label>Chọn ảnh</label>
                                             <input type="file" name="image_vi">

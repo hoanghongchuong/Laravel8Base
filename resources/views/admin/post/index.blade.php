@@ -51,7 +51,7 @@
                                 @if($type !='about')
                                 <td>
                                     <div class="box-img">
-                                        <img src="{{$item->img_url}}" alt="">
+                                        <img src="{{asset($item->image_vi)}}" alt="">
                                     </div>
                                 </td>
                                 @endif

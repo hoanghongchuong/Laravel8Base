@@ -22,11 +22,11 @@ class Post extends Model
     ];
     public function getImageAttribute()
     {
-        return !empty($this->attributes['image_vi']) ? Storage::url($this->attributes['image_vi']) : Storage::url('image/no-image.png');
+        return !empty($this->attributes['image_vi']) ? asset($this->attributes['image_vi']) : '';
     }
     public function getIconAttribute()
     {
-        return !empty($this->attributes['icon']) ? Storage::url($this->attributes['icon']) : Storage::url('image/no-image.png');
+        return !empty($this->attributes['icon']) ? asset($this->attributes['icon']) : '';
     }
     public function getPostPaginate($type) {
         return $this->where('type', $type)->paginate(20);

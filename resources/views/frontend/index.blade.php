@@ -1,6 +1,11 @@
 <html>
 
 <head>
+    <?php
+
+    $setting = App\Models\Setting::first();
+//    $lang = Cache::get('lang');
+    ?>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{isset($title) ? $title : 'title'}}</title>
@@ -8,6 +13,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="robots" content="noindex, nofollow" />
     <meta name='revisit-after' content='1 days' />
+
+    <link rel="shortcut icon" href="{!! asset($setting->favicon) !!}" type="image/png" />
 
 
     <link rel="shortcut icon" href="" type="image" />

@@ -30,11 +30,6 @@ class PostController extends Controller
     {
         $type = $request->type;
         $posts = $this->post->getPostPaginate($type);
-        $posts->map(function ($item) {
-            $item->img_url = $item->image;
-            return $item;
-        });
-//        dd($posts);
         return view('admin.post.index', compact('posts', 'type'));
     }
 
@@ -48,16 +43,22 @@ class PostController extends Controller
     public function store(UploadRequest $request)
     {
         $input = $request->all();
+        $path_img='upload/images';
 //        $dataUpload = $this->storageTraitUpload($request, 'image_vi', 'public/image');
         if($request->has('icon_home')) {
             $file = $request->file('icon_home');
-            $filePath = $file->store('public/image');
-            $input['icon'] = $filePath;
+            $file_name = time().'_'.$file->getClientOriginalName();
+            $filePathIcon = $path_img.'/'.$file_name;
+            $file->move($path_img, $file_name);
+            $input['icon'] = $filePathIcon;
         }
         if($request->has('image_vi')) {
-            $file = $request->file('image_vi');
-            $filePath = $file->store('public/image');
-            $input['image_vi'] = $filePath;
+            $fileImage = $request->file('image_vi');
+            $fileNameImage = time().'_'.$fileImage->getClientOriginalName();
+            $filePathImage = $path_img.'/'.$fileNameImage;
+            $fileImage->move($path_img, $fileNameImage);
+            $input['image_vi'] = $filePathImage;
+//            $filePath = $file->store('public/image');
         }
         $input['slug_vi'] = isset($input['name_vi']) ? Str::slug($input['name_vi']) : '';
         $input['slug_en'] = isset($input['name_en']) ? Str::slug($input['name_en']) : '';
@@ -71,8 +72,6 @@ class PostController extends Controller
     {
         $type = $request->type;
         $post = $this->post->findOrFail($id);
-        $post->image_vi = $post->image;
-        $post->icon_url = $post->icon;
         $htmlOption = $this->getCategory($post->category_id, $type);
 
         return view('admin.post.edit', compact('post', 'htmlOption', 'type'));
@@ -82,16 +81,22 @@ class PostController extends Controller
     {
         $post = $this->post->findOrFail($id);
         $input = $request->all();
+        $oldImage = $post->image_vi;
+        $path_img='upload/images';
         if($request->has('icon_home')) {
             $file = $request->file('icon_home');
-            $filePath = $file->store('public/image');
-            $input['icon'] = $filePath;
+            $file_name = time().'_'.$file->getClientOriginalName();
+            $filePathIcon = $path_img.'/'.$file_name;
+            $file->move($path_img, $file_name);
+            $input['icon'] = $filePathIcon;
         }
-        $oldImage = $post->image_vi;
         if($request->has('image_vi')) {
-            $file = $request->file('image_vi');
-            $filePath = $file->store('public/image');
-            $input['image_vi'] = $filePath;
+            $fileImage = $request->file('image_vi');
+            $fileNameImage = time().'_'.$fileImage->getClientOriginalName();
+            $filePathImage = $path_img.'/'.$fileNameImage;
+            $fileImage->move($path_img, $fileNameImage);
+            $input['image_vi'] = $filePathImage;
+//            $filePath = $file->store('public/image');
         }
 
         $input['slug_vi'] = isset($input['name_vi']) ? Str::slug($input['name_vi']) : '';

@@ -121,9 +121,9 @@
     <div class="section clearfix tatsu-wrap">
         <div class="container equipment">
             <div class="row tac pdb-100">
-                <h2>EQUIPMENT</h2>
+                <h2>{{trans('equipment')}}</h2>
                 <div class="tatsu-text-inner des">
-                    <p>Through strategic partnerships with some of the best aquaculture equipment producers across the world, Bloom Aqua provides everything you need for your aquaculture operation.</p>
+{{--                    <p>Through strategic partnerships with some of the best aquaculture equipment producers across the world, Bloom Aqua provides everything you need for your aquaculture operation.</p>--}}
                 </div>
                 <div class="slider-equipment">
                     <div class="owl-carousel owl-theme">
