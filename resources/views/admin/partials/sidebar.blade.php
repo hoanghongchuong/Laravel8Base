@@ -25,14 +25,14 @@
                         </p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="{{route('user.index')}}" class="nav-link">
-                        <i class="nav-icon fas fa-users"></i>
-                        <p>
-                            Quản lý user
-                        </p>
-                    </a>
-                </li>
+{{--                <li class="nav-item">--}}
+{{--                    <a href="{{route('user.index')}}" class="nav-link">--}}
+{{--                        <i class="nav-icon fas fa-users"></i>--}}
+{{--                        <p>--}}
+{{--                            Quản lý user--}}
+{{--                        </p>--}}
+{{--                    </a>--}}
+{{--                </li>--}}
                 <li class="nav-item">
                     <a href="/admin/post?type=post" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
@@ -127,12 +127,12 @@
                         <p>Trang thiết bị</p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="/admin/post?type=expertise" class="nav-link">
-                        <i class="far fa-newspaper nav-icon"></i>
-                        <p> Chuyên môn</p>
-                    </a>
-                </li>
+{{--                <li class="nav-item">--}}
+{{--                    <a href="/admin/post?type=expertise" class="nav-link">--}}
+{{--                        <i class="far fa-newspaper nav-icon"></i>--}}
+{{--                        <p> Chuyên môn</p>--}}
+{{--                    </a>--}}
+{{--                </li>--}}
 
                 <li class="nav-item">
                     <a href="{{route('admin.contact.index')}}" class="nav-link">

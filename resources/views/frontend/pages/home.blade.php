@@ -130,13 +130,11 @@
                         @foreach($equipments as $eq)
                         <div class="item">
                             <div class="box-img">
-                                <img src="{{$eq->img_url}}" alt="">
+                                <a href="{{url('trang-thiet-bi/'.$eq->slug_vi.'.html')}}"><img src="{{$eq->img_url}}" alt=""></a>
                             </div>
-                            <p>{{$eq['name_'.$lang]}}</p>
+                            <p><a href="{{url('trang-thiet-bi/'.$eq->slug_vi.'.html')}}">{{$eq['name_'.$lang]}}</a></p>
                         </div>
                         @endforeach
-
-
                     </div>
                 </div>
             </div>
