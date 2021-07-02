@@ -23,7 +23,7 @@ class HomeController extends Controller
         $posts->map(function ($post) {
             $post->img_url = $post->image;
         });
-
+//dd($posts);
         $expertise = Post::where('status_vi', 1)->where('type', 'expertise')->orderBy('id','desc')->get();
         $expertise->map(function ($ex) {
             $ex->img_url = $ex->image;
