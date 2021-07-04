@@ -48,7 +48,7 @@
                     </div>
                 </div>
                 <div class="get-more-info clearfix col-md-12">
-                    <a href="/lien-he"> Get more info</a>
+                    <a href="/lien-he"> {{trans('get_more_information')}}</a>
                 </div>
             </div>
         </div>
