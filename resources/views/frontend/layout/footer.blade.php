@@ -43,21 +43,22 @@
 @endif
 <div class="section clearfix footer">
     <div class="container">
-        <div class="row" style="padding-bottom: 30px;border-bottom: 1px solid #ccc;">
-            <div class="col-xs-6 col-md-4">
-                <h6>{{$setting['company_'.$lang]}}</h6>
-                <div class="des">
+        <div class="row" style="padding-bottom: 30px;border-bottom: 1px solid #ccc; justify-content: space-between;">
+            <div class="col-xs-6 col-md-4 col-lg-4">
+                <img src="{{$setting->logo}}" alt="" class="img-logo">
+                <div class="des" style="margin-top: 10px;">
                     {{$setting['des_'.$lang]}}
                 </div>
             </div>
-            <div class="col-xs-6 col-md-4">
+            <div class="col-xs-6 col-md-4 col-lg-4">
                 <h6>Contact</h6>
                 <div class="des info">
+                    <p>{{$setting['company_'.$lang]}}</p>
                     <p><i class="fa fa-envelope" aria-hidden="true"></i> {{$setting->email}}</p>
                     <p><i class="fa fa-map-marker" aria-hidden="true"></i>{{$setting['address_'.$lang]}}</p>
                 </div>
             </div>
-            <div class="col-xs-6 col-md-4">
+            <div class="col-xs-6 col-md-4 col-lg-4">
                 <h6>Hotline</h6>
                 <div class="des info">
                     <p><i class="fa fa-phone"></i> {{$setting->hotline}}</p>

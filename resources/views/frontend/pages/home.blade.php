@@ -8,7 +8,7 @@
                         <h1>{{$title}}</h1>
                     </div>
                     <div class="tatsu-bottom">
-                        <p>Specialists in aquaculture technology solutions</p>
+{{--                        <p>Specialists in aquaculture technology solutions</p>--}}
                     </div>
                 </div>
             </div>

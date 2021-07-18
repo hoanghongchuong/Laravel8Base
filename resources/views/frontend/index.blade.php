@@ -48,5 +48,6 @@
 <script src="{{asset('frontend/js/bootstrap.min.js')}}"></script>
 <script src="{{asset('frontend/js/owl.carousel.min.js')}}"></script>
 <script src="{{asset('frontend/js/script.js')}}"></script>
+<script src="{{asset('frontend/js/cus.js')}}"></script>
 </body>
 </html>

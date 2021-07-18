@@ -67,7 +67,95 @@ a:hover {
 .clearfix {
     clear: both;
 }
+.menu-top {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+.menu-top .address {
+    text-align: right;
+    font-size: 18px;
+    color: #0D4E96;
+    font-weight: bold;
+    font-family: Josefin;
+}
+.menu-top ul {
+    text-align: right;
+    margin-top: 35px;
+}
+.menu-top ul li {
+    display: inline-block;
+    margin-left: 5px;
+}
+.menu-top ul li i {
+    font-size: 20px;
+}
+.fixed-top {
+    position: fixed !important;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+.vk-header__bot { background-color: #0d4e96; color: #fff; position: -webkit-sticky; position: sticky; top: 0px; z-index: 11; }
+@media (min-width: 992px) {
+    .vk-header__bot-content {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center; -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between; }
+}
+.vk-header__menu { padding-left: 50px; }
+/**BEGIN: MENU*!*/
+.vk-menu__main {font-weight: bold; text-transform: uppercase; display: none; margin-bottom: 0px}
+.vk-menu__main > li > a {
+    font-family: Josefin;
+    font-size: 16px;
+    font-weight: 500;
+    color: #f5f5f5;
+    line-height: 24px;
+    text-transform: uppercase;
+}
 
+@media (min-width: 992px) { .vk-menu__main { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; } }
+
+.vk-menu__main > li { padding: 0 35px; }
+
+.vk-menu__main > li > a { display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex;
+    -webkit-box-align: center; -ms-flex-align: center; align-items: center; height: 50px; padding: 10px 0px;
+    border-bottom: 2px solid transparent; }
+
+.vk-menu__main > li > a:focus { background-color: #0d4e96; color: #fff; }
+
+.vk-menu__main > li > a ._icon { position: relative; top: -3px;
+    font-size: 30px;}
+
+.vk-menu__main > li:first-child { font-size: 24px; line-height: 1; }
+
+.vk-menu__main > li.active a { background-color: #0d4e96; color: #fff; }
+
+.vk-menu__main > li:hover > a { background-color: #0d4e96; color: #fff; border-color: #fd2d1c; }
+
+.vk-menu__main > li:hover > .vk-menu__child { visibility: visible; opacity: 1; }
+
+.vk-menu__child { position: absolute;padding-left: 5px; padding-right: 3px; /*padding: 5px 20px;*/ z-index: 10000000; background: #0D4E96; /*background-color: rgba(13, 78, 150, 0.5);*/ min-width: 200px; visibility: hidden; opacity: 0; -webkit-transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; }
+
+.vk-menu__child li { position: relative; border-top: 1px solid rgba(255, 255, 255, 0.3); }
+
+.vk-menu__child li:first-child { border-top: none; }
+
+.vk-menu__child li a { display: block; padding: 10px 0px; color: #fff;
+    font-size: 14px !important;}
+
+.vk-menu__child li a:hover, .vk-menu__child li a:focus { color: #fd2d1c; }
+
+.vk-menu__child li > ul { top: 0; left: 100%; }
+
+.vk-menu__child li:hover > ul { opacity: 1; visibility: visible; }
+
+/*END: MENU*/
 .header {
     position: absolute;
     z-index: 99999;
@@ -79,7 +167,6 @@ a:hover {
 .header-top {
     box-sizing: border-box;
     align-items: center;
-    /*background: rgba(0,63,106,0.8);*/
     background: #0d4e96;
     border-color: rgba(0,0,0,0);
     font-size: 16px;
@@ -127,21 +214,21 @@ ul.gt {
 .navi > li > a:hover {
     color: rgba(34,147,215,1);
 }
-.vk-menu__child {
-    display: none;
-    position: absolute;
-    top: 40px;
-    background: rgba(255,255,255,1);
-    width: 100%;
-    z-index: 999999;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: start;
-    padding: 15px;
-    border-top: 1px solid #020202;
-    max-height: 420px;
-    border-radius: 4px;
-}
+/*.vk-menu__child {*/
+/*    display: none;*/
+/*    position: absolute;*/
+/*    top: 40px;*/
+/*    background: rgba(255,255,255,1);*/
+/*    width: 100%;*/
+/*    z-index: 999999;*/
+/*    flex-direction: column;*/
+/*    flex-wrap: wrap;*/
+/*    align-items: start;*/
+/*    padding: 15px;*/
+/*    border-top: 1px solid #020202;*/
+/*    max-height: 420px;*/
+/*    border-radius: 4px;*/
+/*}*/
 .vk-menu__child li{
     line-height: 24px;
 }
@@ -526,7 +613,7 @@ svg:not(:root) {
     text-decoration: none;
     font-size: 18px;
     color: #fff;
-    display: block;
+    display: inline-block;
     transition: 0.3s;
 }
 
@@ -827,6 +914,6 @@ svg:not(:root) {
     background-image: url(https://www.bloom-aqua.com/wp-content/uploads/2020/01/jet-kim-_w-VVA8PrC0-unsplash.jpg);
 }
 .img-logo {
-    width: 74px;
-    height: 42px;
+    width: 50%;
+    /*height: 42px;*/
 }

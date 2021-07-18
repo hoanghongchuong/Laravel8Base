@@ -99,22 +99,22 @@
                                         <label for="">Zalo</label>
                                         <input type="text" placeholder="" class="form-control" value="{{$setting ? $setting->zalo : ''}}" name="zalo">
                                     </div>
-                                    <div class="form-group">
-                                        <label for="">Instagram</label>
-                                        <input type="text" placeholder="" class="form-control" value="{{$setting ? $setting->instagram : ''}}" name="instagram">
-                                    </div>
+{{--                                    <div class="form-group">--}}
+{{--                                        <label for="">Instagram</label>--}}
+{{--                                        <input type="text" placeholder="" class="form-control" value="{{$setting ? $setting->instagram : ''}}" name="instagram">--}}
+{{--                                    </div>--}}
                                     <div class="form-group">
                                         <label for="">Youtube</label>
                                         <input type="text" placeholder="" class="form-control" value="{{$setting ? $setting->youtube : ''}}" name="youtube">
                                     </div>
-                                    <div class="form-group">
-                                        <label for="">Twitter</label>
-                                        <input type="text" placeholder="" class="form-control" value="{{$setting ? $setting->twitter : ''}}" name="twitter">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="">In</label>
-                                        <input type="text" placeholder="" class="form-control" value="{{$setting ? $setting->social_in : ''}}" name="social_in">
-                                    </div>
+{{--                                    <div class="form-group">--}}
+{{--                                        <label for="">Twitter</label>--}}
+{{--                                        <input type="text" placeholder="" class="form-control" value="{{$setting ? $setting->twitter : ''}}" name="twitter">--}}
+{{--                                    </div>--}}
+{{--                                    <div class="form-group">--}}
+{{--                                        <label for="">In</label>--}}
+{{--                                        <input type="text" placeholder="" class="form-control" value="{{$setting ? $setting->social_in : ''}}" name="social_in">--}}
+{{--                                    </div>--}}
                                     <div class="form-group">
                                         <label for="">Bản đồ</label>
                                         <input type="text" placeholder="" class="form-control" value="{{$setting ? $setting->iframe_map: ''}}" name="iframe_map">

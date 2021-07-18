@@ -151,6 +151,14 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a href="{{route('admin.change.pass')}}" class="nav-link">
+                        <i class="nav-icon fas fa-id-card"></i>
+                        <p>
+                            Đổi mật khẩu
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="{{route('admin.logout')}}" class="nav-link">
                         <i class="nav-icon fas fa-sign-out-alt"></i>
                         <p>

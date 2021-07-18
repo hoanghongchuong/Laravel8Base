@@ -68,6 +68,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
         Route::get('/edit/{id}', [UserController::class, 'edit'])->name('user.edit');
         Route::post('/edit/{id}', [UserController::class, 'update'])->name('users.update');
         Route::get('/delete/{id}', [UserController::class, 'delete'])->name('users.delete');
+        Route::get('change/password', [UserController::class,'changePass'])->name('admin.change.pass');
+        Route::post('change/password', [UserController::class,'changePassword'])->name('change.pass');
     });
 
     Route::prefix('setting')->group(function() {

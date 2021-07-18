@@ -89,5 +89,18 @@ class UserController extends Controller
         dd($user);
     }
 
+    public function changePass() {
+        return view('admin.user.change-pass');
+    }
 
+    public function changePassword(Request $request) {
+        $user = auth()->user();
+
+        if($request->new_password) {
+            $user->update([
+               'password' => bcrypt($request->new_password)
+            ]);
+        }
+        return redirect()->back()->with('success', 'Cập nhật thành công');
+    }
 }
