@@ -23,6 +23,11 @@ $menus = \App\Models\Menu::where('parent_id', 0)->orderBy('order', 'asc')->get()
                     <li><a href=""><img src="{{asset('frontend/images/zalo-icon.png')}}" alt="">{{$setting ? $setting->zalo : ''}}</a></li>
                 </ul>
                 <p class="address"><a href="tel:Hotline: {{$setting['hotline']}}">Hotline: {{$setting['hotline']}}</a></p>
+                <p class="text-right">
+                    <a href="/change-language/vi"><img src="{{asset('frontend/images/vn.png')}}" width="25px" alt=""></a>
+                    <a href="/change-language/en"><img src="{{asset('frontend/images/en.png')}}" width="25px" alt=""></a>
+                    <a href="/change-language/es"><img src="{{asset('frontend/images/es.png')}}" width="25px" alt=""></a>
+                </p>
             </div>
         </div>
     </div>

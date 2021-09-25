@@ -77,10 +77,12 @@ a:hover {
     color: #0D4E96;
     font-weight: bold;
     font-family: Josefin;
+    margin-bottom: 0px;
 }
 .menu-top ul {
     text-align: right;
-    margin-top: 35px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 .menu-top ul li {
     display: inline-block;
